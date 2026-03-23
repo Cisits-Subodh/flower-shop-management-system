@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    padding: 100px;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+}
+
+.form input {
+    padding: 10px;
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+.form button {
+    padding: 10px;
+    padding: 10px;
+    display: block;
+    width: 150px;
+    margin: 10px auto;
+    border-radius: 50px;
+    border: 0;
+    background-color: blue;
+    color: white;
+}
