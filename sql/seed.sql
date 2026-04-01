@@ -1,0 +1,1 @@
+INSERT INTO user VALUES('admin', SHA1('password'), 'admin');
