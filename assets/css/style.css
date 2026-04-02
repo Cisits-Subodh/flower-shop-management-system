@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 10vw auto;
+    gap: 1vw;
+}
+
+.header {
+    border-bottom: 1px cornflowerblue solid;
+}
+
+.aside {
+    background-color: cornflowerblue;
+    padding: 10px;
+    height: 90vh;
+}
+
+.aside a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    padding: 10px
+}
