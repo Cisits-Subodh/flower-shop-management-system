@@ -14,6 +14,8 @@ class UserController
         $sql = "SELECT * FROM user WHERE user_id='$user_id' AND password=SHA1('$password')";
         $result = $connection->query($sql);
         if ($result->num_rows > 0) {
+            session_start();
+            $_SESSION['user_id'] = $user_id;
             $row = $result->fetch_assoc();
             if ($row['role'] == 'admin') {
                 header("location:/user/admin-dashboard");
