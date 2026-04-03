@@ -13,18 +13,18 @@
     </header>
     <div class="main-layout">
         <main class="main">
-            <h3>Dashboard</h3>
+            <h3>Master</h3>
             <div class="card-menu">
-                <a href="/master">
+                <a href="/master/decoration">
                     <div>
-                        <label>Master</label>
+                        <label>Decoration</label>
                     </div>
                 </a>
                 <div>
-                    <label>Staff</label>
+                    <label>Price List</label>
                 </div>
                 <div>
-                    <label>Reports</label>
+                    <label>Staff</label>
                 </div>
             </div>
         </main>

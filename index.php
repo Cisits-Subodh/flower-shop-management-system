@@ -18,6 +18,12 @@ switch ($request) {
     case "/user/staff-dashboard":
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/user/staff-dashboard.php";
         break;
+    case "/master":
+        require $_SERVER['DOCUMENT_ROOT'] . "/pages/master/index.php";
+        break;
+        case "/master/decoration":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/master/decoration/index.php";
+        break;
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";
 }

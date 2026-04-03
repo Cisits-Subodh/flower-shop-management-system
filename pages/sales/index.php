@@ -8,15 +8,18 @@
 </head>
 
 <body>
-    <h1>Staff Dashboard</h1>
-    <header>
+    <header class="header">
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/header.php" ?>
-
     </header>
     <main>
-        <aside>
-        </aside>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
+            <label for="">Sales</label>
+            <input type="text" id="no" name="no">
     </main>
+
+
+
+    </div>
 </body>
 
 </html>

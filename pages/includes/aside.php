@@ -1,5 +1,5 @@
 <nav class="aside">
-    <a href="">Dashboard</a>
-    <a href="">Master</a>
+    <a href="/user/admin-dashboard">Dashboard</a>
+    <a href="/master">Master</a>
     <a href="">Reports</a>
 </nav>
