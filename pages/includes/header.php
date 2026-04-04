@@ -7,9 +7,3 @@ if (!isset($_SESSION['user_id']))
 <link rel="stylesheet" href="/assets/css/style.css">
 
 <h1>Flower Shop Management System</h1>
-
-<div class="col-1">
-    <main>
-
-    </main>
-</div>
