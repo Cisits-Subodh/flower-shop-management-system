@@ -5,31 +5,36 @@
 
 .main-layout {
     display: grid;
-    grid-template-columns: 10vw auto;
+    grid-template-columns: 8vw auto;
     gap: 1vw;
 }
+.main-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right:400%;
+    display: flex;
+    
 
-.header {
+}
+.main-layout h3{
+    margin: 0%;
+    margin-top: 0%;
+    padding: 0%;
+}
+.header h1{
+    background-color: coral;
+    font-size: 150%;
     border-bottom: 1px grey solid;
+    padding:-0.20vh;
+
+}
+.main h3{
+    margin: 0%;
+    padding: 0%;
+    margin-bottom:-0.0% ;
+    margin-top:-0.40%;
 }
 
-.aside {
-    background-color: cornflowerblue;
-    padding: 10px;
-    height: 90vh;
-}
-.aside-sales{
-    background-color: cornflowerblue;
-    padding: 10px;
-    height: 90vh;
-}
-
-
-.aside a {
-    display: block;
-    color: white;
-    text-decoration: none;
-}
 
 .main {
     padding: 10px
@@ -37,7 +42,7 @@
 
 .card-menu {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1vw;
 }
 
@@ -53,11 +58,8 @@
     padding: 5px;
     text-align: center;
 }
-
-
-/* sales */
-.aside-sales label{
-    color: blue;
-
+.col-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 100%;
 }
-

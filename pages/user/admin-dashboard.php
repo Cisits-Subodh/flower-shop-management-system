@@ -11,23 +11,83 @@
     <header class="header">
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/header.php" ?>
     </header>
-    <div class="main-layout">
-        <main class="main">
-            <h3>Dashboard</h3>
-            <div class="card-menu">
-                <a href="/master">
+    <div class="col-1">
+
+
+        <div class="main-layout">
+            <main class="main">
+                <h3>Dashboard</h3>
+                <div class="card-menu">
+                    <a href="/master">
+                        <div>
+                            <label>Master</label>
+                        </div>
+                    </a>
+                    <a href="/staff">
+                        <div>
+                            <label>Staff</label>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div>
+                            <label>Recent-activity</label>
+
+                        </div>
+                    </a>
+                    <a href="/Stock-Management">
+                        <div>
+                            <label> Stock Management</label>
+                        </div>
+                    </a>
+                    <a href="">
+
+
+                        <div>
+                            <label>purchase</label>
+                        </div>
+                    </a>
+
+
+                    <a href="/">
+                        <div>
+                            <label>Notification Manage</label>
+                        </div>
+                    </a>
                     <div>
-                        <label>Master</label>
+                        <label>payment Status</label>
                     </div>
-                </a>
-                <div>
-                    <label>Staff</label>
+                    <div>
+                        <label>Reviews Mange</label>
+                    </div>
+                    <div>
+                        <label>Setting</label>
+                    </div>
+
+                    <div>
+                        <label>Order List</label>
+                    </div>
+
+                    <div>
+                        <label>sales</label>
+
+                    </div>
+
+                    <div>
+                        <label>Delet</label>
+                    </div>
+
+                    <div>
+                        <label>Edit</label>
+                    </div>
+
+                    <div>
+
+                        <label>Reports</label>
+                    </div>
                 </div>
-                <div>
-                    <label>Reports</label>
-                </div>
-            </div>
-        </main>
+            </main>
+        </div>
     </div>
 </body>
 

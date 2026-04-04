@@ -21,8 +21,11 @@ switch ($request) {
     case "/master":
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/master/index.php";
         break;
-        case "/master/decoration":
+    case "/master/decoration":
         include $_SERVER['DOCUMENT_ROOT'] . "/pages/master/decoration/index.php";
+        break;
+    case "/staff":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/staff/index.php";
         break;
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";
