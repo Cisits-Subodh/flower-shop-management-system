@@ -70,7 +70,22 @@
     margin-right: 100%;
 }
 
+/* new satff */
+.head h3{
+    text-align: center;
+    border: 2px solid;
+    margin: 0%;
+    /* transition: cubic-bezier(0.165, 0.84, 0.44, 1 */
+
+}
+.new-form{
+    border: 2px solid;
+    margin-top:5%;
+    background-color: rgb(150 200 200);
+    background-position: 100%;
+}
 .new-form label {
+    
     margin-left: 100vh;
     align-items: center;
     text-align: center;
@@ -81,12 +96,13 @@
 
 
 }
-.input-g{
-    gap:10px;
-}
-.new-form button {
-    text-align: justify;
-    text-align: center;
-    padding: -0.30vh;
-    margin-left: 100vh;
-}
+.new-form button{
+    align-items: center;
+    display: block;
+    margin-left:100vh;
+    }
+
+/* .button-s{ 
+    margin-right: 100%;
+    margin-top: -0.200%;
+} */
