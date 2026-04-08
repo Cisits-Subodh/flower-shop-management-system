@@ -1,3 +1,10 @@
+<?php
+
+use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
+
+$staffController = new StaffController();
+$staff_count = $staffController->count();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,81 +19,43 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/header.php" ?>
     </header>
     <div class="col-1">
+        <div class="main-container">
+            <aside>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
+            </aside>
 
-
-        <div class="main-layout">
-            <main class="main">
-                <h3>Dashboard</h3>
-                <div class="card-menu">
-                    <a href="/master">
+            <div class="main-layout">
+                <main class="main">
+                    <h3>Dashboard</h3>
+                    <div class="card-menu">
                         <div>
-                            <label>Master</label>
+                            <label class="label">Products</label>
+                            <a href="/product" class="data">10</a>
                         </div>
-                    </a>
-                    <a href="/staff">
                         <div>
-                            <label>Staff</label>
+                            <label class="label">Staff</label>
+                            <a href="/staff" class="data"><?= $staff_count ?></a>
                         </div>
-                    </a>
-
-                    <a href="">
                         <div>
-                            <label>Recent-activity</label>
-
+                            <label class="label">Orders</label>
+                            <label class="data"></label>
                         </div>
-                    </a>
-                    <a href="/Stock-Management">
                         <div>
                             <label> Stock Management</label>
                         </div>
-                    </a>
-                    <a href="">
-
 
                         <div>
                             <label>purchase</label>
                         </div>
-                    </a>
-
-
-                    <a href="/">
                         <div>
                             <label>Notification Manage</label>
                         </div>
-                    </a>
-                    <div>
-                        <label>payment Status</label>
+                        <div>
+                            <label>payment Status</label>
+                        </div>
                     </div>
-                    <div>
-                        <label>Reviews Mange</label>
-                    </div>
-                    <div>
-                        <label>Setting</label>
-                    </div>
-
-                    <div>
-                        <label>Order List</label>
-                    </div>
-
-                    <div>
-                        <label>sales</label>
-
-                    </div>
-
-                    <div>
-                        <label>Delet</label>
-                    </div>
-
-                    <div>
-                        <label>Edit</label>
-                    </div>
-
-                    <div>
-
-                        <label>Reports</label>
-                    </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </div>
     </div>
 </body>

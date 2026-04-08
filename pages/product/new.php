@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Product</title>
 </head>
 
 <body>
@@ -17,10 +17,10 @@
         </aside>
         <main class="main">
             <div class="head">
-                <h3>New Staff</h3>
+                <h3>New Product</h3>
             </div>
             <div class="new-form">
-                <form action="/staff/create" method="post">
+                <form action="/product/create" method="post">
                     <label for=" ">Name</label>
                     <input type="text" name="name" id="name">
                     <label for="">Email-id</label>

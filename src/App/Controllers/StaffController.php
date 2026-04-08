@@ -47,4 +47,12 @@ class StaffController
     {
 
     }
+
+    function count()
+    {
+        $sql = "SELECT COUNT(staff_id) FROM staff";
+        $result = $this->connection->query($sql);
+        $row = $result->fetch_row();
+        return $row[0];
+    }
 }
