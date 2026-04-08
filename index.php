@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . "/vendor/autoload.php";
 
+use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
 use Subod\FlowerShopManagementSystem\App\Controllers\UserController;
 
 $request = $_SERVER['REQUEST_URI'];
@@ -10,7 +11,8 @@ switch ($request) {
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/user/login.php";
         break;
     case "/user/authenticate":
-        UserController::authenticate();
+        $userController = new UserController();
+        $userController->authenticate();
         break;
     case "/user/admin-dashboard":
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/user/admin-dashboard.php";
@@ -26,6 +28,13 @@ switch ($request) {
         break;
     case "/staff":
         include $_SERVER['DOCUMENT_ROOT'] . "/pages/staff/index.php";
+        break;
+    case "/staff/new":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/staff/new.php";
+        break;
+    case "/staff/create":
+        $staffController = new StaffController();
+        $staffController->create();
         break;
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";

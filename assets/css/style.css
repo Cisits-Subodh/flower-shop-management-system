@@ -8,35 +8,40 @@
     grid-template-columns: 8vw auto;
     gap: 1vw;
 }
-.main-layout{
+
+.main-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-right:400%;
+    margin-right: 400%;
     display: flex;
-    
+
 
 }
-.main-layout h3{
+
+.main-layout h3 {
     margin: 0%;
     margin-top: 0%;
     padding: 0%;
 }
-.header h1{
+
+.header h1 {
     background-color: coral;
     font-size: 150%;
     border-bottom: 1px grey solid;
-    padding:-0.20vh;
+    padding: -0.20vh;
 
 }
-.main h3{
+
+.main h3 {
     margin: 0%;
     padding: 0%;
-    margin-bottom:-0.0% ;
-    margin-top:-0.40%;
+    margin-bottom: -0.0%;
+    margin-top: -0.40%;
 }
 
 
 .main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px
 }
 
@@ -58,8 +63,46 @@
     padding: 5px;
     text-align: center;
 }
-.col-1{
+
+.col-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-right: 100%;
 }
+
+/* new satff */
+.head h3{
+    text-align: center;
+    border: 2px solid;
+    margin: 0%;
+    /* transition: cubic-bezier(0.165, 0.84, 0.44, 1 */
+
+}
+.new-form{
+    border: 2px solid;
+    margin-top:5%;
+    background-color: rgb(150 200 200);
+    background-position: 100%;
+}
+.new-form label {
+    
+    margin-left: 100vh;
+    align-items: center;
+    text-align: center;
+}
+
+.new-form input {
+    margin-left: 100vh;
+
+
+}
+.new-form button{
+    align-items: center;
+    display: block;
+    margin-left:100vh;
+    }
+
+/* .button-s{ 
+    margin-right: 100%;
+    margin-top: -0.200%;
+} */

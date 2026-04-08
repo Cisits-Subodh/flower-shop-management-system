@@ -6,7 +6,7 @@ use Subod\FlowerShopManagementSystem\App\Config\DbConfig;
 
 class UserController
 {
-    static function authenticate()
+    function authenticate()
     {
         $user_id = $_POST['user_id'];
         $password = $_POST['password'];

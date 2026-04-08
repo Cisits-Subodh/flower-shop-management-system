@@ -13,6 +13,6 @@ CREATE TABLE staff
 (
     staff_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
-    gemder CHAR(1),
+    gender CHAR(1),
     dob DATE
-)
+);
