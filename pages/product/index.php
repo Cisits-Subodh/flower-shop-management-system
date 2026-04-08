@@ -1,9 +1,5 @@
 <?php
 
-use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
-
-$staffController = new StaffController();
-$users = $staffController->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +8,7 @@ $users = $staffController->getAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff</title>
+    <title>Product</title>
 </head>
 
 <body>
@@ -24,8 +20,8 @@ $users = $staffController->getAll();
             <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
         </aside>
         <main class="main">
-            <h3>Staff</h3>
-            <a href="/staff/new" class="button">New Staff</a>
+            <h3>Product</h3>
+            <a href="/product/new" class="button">New Product</a>
             <table class="crud-table">
                 <thead class="border">
                     <tr>
@@ -37,7 +33,7 @@ $users = $staffController->getAll();
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($users as $user) { ?>
+                    <!-- <?php foreach ($users as $user) { ?>
                         <tr>
                             <td><?= $user['staff_id'] ?></td>
                             <td><?= $user['name'] ?></td>
@@ -45,7 +41,7 @@ $users = $staffController->getAll();
                             <td><?= $user['dob'] ?></td>
                             <td><a href="">View</a> <a href="">Edit</a></td>
                         </tr>
-                    <?php } ?>
+                    <?php } ?> -->
                 </tbody>
             </table>
         </main>

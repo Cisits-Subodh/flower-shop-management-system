@@ -36,6 +36,12 @@ switch ($request) {
         $staffController = new StaffController();
         $staffController->create();
         break;
+    case "/product":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/product/index.php";
+        break;
+    case "/product/new":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/product/new.php";
+        break;
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";
 }

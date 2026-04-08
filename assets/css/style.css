@@ -3,27 +3,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main-layout {
-    display: grid;
-    grid-template-columns: 8vw auto;
-    gap: 1vw;
-}
-
-.main-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-right: 400%;
-    display: flex;
-
-
-}
-
-.main-layout h3 {
-    margin: 0%;
-    margin-top: 0%;
-    padding: 0%;
-}
-
 .header h1 {
     background-color: coral;
     font-size: 150%;
@@ -32,27 +11,34 @@
 
 }
 
-.main h3 {
-    margin: 0%;
-    padding: 0%;
-    margin-bottom: -0.0%;
-    margin-top: -0.40%;
+.main-container {
+    display: grid;
+    grid-template-columns: 200px auto;
 }
 
+.aside {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.aside a {
+    text-decoration: none;
+}
 
 .main {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px
+    padding: 20px
 }
 
 .card-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 1vw;
 }
 
-.card-menu a {
-    text-decoration: none;
+.card-menu .label {
+    display: block;
+    font-weight: bold;
 }
 
 .card-menu div {
@@ -64,45 +50,30 @@
     text-align: center;
 }
 
-.col-1 {
+.new-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-right: 100%;
-}
-
-/* new satff */
-.head h3{
-    text-align: center;
-    border: 2px solid;
-    margin: 0%;
-    /* transition: cubic-bezier(0.165, 0.84, 0.44, 1 */
-
-}
-.new-form{
-    border: 2px solid;
-    margin-top:5%;
-    background-color: rgb(150 200 200);
-    background-position: 100%;
-}
-.new-form label {
-    
-    margin-left: 100vh;
-    align-items: center;
-    text-align: center;
 }
 
 .new-form input {
-    margin-left: 100vh;
-
-
-}
-.new-form button{
-    align-items: center;
     display: block;
-    margin-left:100vh;
-    }
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 50%;
+}
 
-/* .button-s{ 
-    margin-right: 100%;
-    margin-top: -0.200%;
-} */
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.crud-table th {
+    background-color: coral;
+    color: white;
+    text-align: left;
+    padding: 5px;
+}
+
+.crud-table td {
+    padding: 5px;
+}
