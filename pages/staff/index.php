@@ -31,9 +31,14 @@ $users = $staffController->getAll();
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
-                        <th>Gender</th>
+                        <th>Mobile-No.</th>
                         <th>DOB</th>
-                        <th></th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>District</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Pin-code</th>
                     </tr>
                 </thead>
                 <tbody>
