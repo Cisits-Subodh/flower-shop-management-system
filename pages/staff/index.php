@@ -48,6 +48,11 @@ $users = $staffController->getAll();
                             <td><?= $user['name'] ?></td>
                             <td><?= $user['gender'] ?></td>
                             <td><?= $user['dob'] ?></td>
+                            <td><?= $user['adress'] ?></td>
+                            <td><?= $user['district'] ?></td>
+                            <td><?= $user['city'] ?></td>
+                            <td><?= $user['state'] ?></td>
+                            <td><?= $user['pincode'] ?></td>
                             <td><a href="">View</a> <a href="">Edit</a></td>
                         </tr>
                     <?php } ?>
