@@ -13,7 +13,7 @@
     </header>
     <div class="main-container">
         <aside>
-             <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
         </aside>
         <main class="main">
             <div class="head">
@@ -29,14 +29,15 @@
                     <input type="Mobile-No" id="mobile no" name="mobile no" required>
                     <label for="dob">Date of Birth</label>
                     <input type="date" name="dob" id="dob" required>
+                    <label for="gender">Gender</label>
+                    <input type="text" name="gender" id="gender" required>
                     <label for="">Address</label>
                     <input type="text" id="address" name="Address" required>
                     <label for="">District</label>
                     <input type="text" id="District" name="District" required>
                     <label for="">Pin Code</label>
                     <input type="pin code" id="pin code" name="pin code" required>
-                    <label for="gender">Gender</label>
-                    <input type="text" name="gender" id="gender" required>
+
                     <button class="button-s">Submit</button>
                 </form>
             </div>

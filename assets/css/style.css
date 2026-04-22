@@ -18,8 +18,18 @@
 
 .aside {
     display: flex;
+    background-color: coral;
     flex-direction: column;
     padding: 20px;
+    height: 300%;
+    gap: 10px;
+}
+
+.aside a:hover {
+    background-color: blue;
+    padding: 10px;
+    color: whitesmoke;
+
 }
 
 .aside a {
@@ -76,4 +86,16 @@
 
 .crud-table td {
     padding: 5px;
+}
+
+/* staff */
+.head h3 {
+    background-color: coral;
+    margin-top:0% ;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 100%;
+
+
 }

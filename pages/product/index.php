@@ -1,5 +1,9 @@
 <?php
 
+use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
+
+$product=new ProductController;
+$products =$product->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -25,23 +29,26 @@
             <table class="crud-table">
                 <thead class="border">
                     <tr>
-                        <th>Id</th>
                         <th>Name</th>
-                        <th>Gender</th>
-                        <th>DOB</th>
-                        <th></th>
+                        <th>List</th>
+                        <th>Unit</th>
+                        <th>Supply of </th>
+                        <th>Rate</th>
+                        <th>gst</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <?php foreach ($users as $user) { ?>
+                     <?php foreach ($products as $product) { ?>
                         <tr>
-                            <td><?= $user['staff_id'] ?></td>
-                            <td><?= $user['name'] ?></td>
-                            <td><?= $user['gender'] ?></td>
-                            <td><?= $user['dob'] ?></td>
+                            <td><?= $product['name'] ?></td>
+                            <td><?= $product['listgroup'] ?></td>
+                            <td><?= $product['unit'] ?></td>
+                            <td><?= $product['supply'] ?></td>
+                            <td><?= $product['rate'] ?></td>
+                            <td><?= $product['gst'] ?></d>
                             <td><a href="">View</a> <a href="">Edit</a></td>
                         </tr>
-                    <?php } ?> -->
+                    <?php } ?>
                 </tbody>
             </table>
         </main>
