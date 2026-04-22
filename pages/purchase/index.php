@@ -1,9 +1,9 @@
 <?php
 
-use Subod\FlowerShopManagementSystem\App\Controllers\purchaseController;
+use Subod\FlowerShopManagementSystem\App\Controllers\PurchaseController;
 
- $purchase = new purchaseController();
-
+$purchaseController = new PurchaseController();
+$purchases = $purchaseController->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +50,7 @@ use Subod\FlowerShopManagementSystem\App\Controllers\purchaseController;
 
 
                 <div class="options">
-                    <a href="/purchase"class="button">New Purchase</a>
+                    <a href="/purchase" class="button">New Purchase</a>
                 </div>
                 <table class="crud-table">
                     <thead class="border">
@@ -66,8 +66,8 @@ use Subod\FlowerShopManagementSystem\App\Controllers\purchaseController;
                     <tbody>
                         <?php foreach ($purchases as $purchase) { ?>
                             <tr>
-                                <?php $id = Purchase['id'] ?>
-                                <td><?=$purchase['']  ?></td>
+                                <?php $id = $purchase['id'] ?>
+                                <td><?= $purchase['']  ?></td>
                                 <td><?= $purchase[''] ?></td>
                                 <td><?= $purchase[''] ?></td>
                                 <td><?= $purchase[''] ?></td>
