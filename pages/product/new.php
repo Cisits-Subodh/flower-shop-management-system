@@ -1,3 +1,10 @@
+<?php
+
+use Subod\FlowerShopManagementSystem\App\Utility\Listgroup;
+
+$listGroup = new Listgroup();
+$listgroups = $listGroup->getAll();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +33,10 @@
                         <input type="text" name="name" id="name">
                     </div>
                     <label for="">List</label>
-                    <select name=">
-                    
+                    <select name="" id="">
+                        <?php foreach ($listgroups as $listgroup) { ?>
+                            <option value="<?= $listgroup['list'] ?>"><?= $listgroup['list'] ?></option>
+                        <?php } ?>
                     </select>
                     <input type="text" id="list" name="list">
                     <label for="">Unit</label>
