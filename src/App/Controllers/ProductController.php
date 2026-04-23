@@ -35,12 +35,12 @@ class ProductController
         $listgroup = $_POST['list'];
         $rate = $_POST['rate'];
         $gst = $_POST['gst'];
-        $supply = $_POST['supply'];
+        $supplier = $_POST['supplier'];
         $unit  = $_POST['unit'];
 
 
 
-        $sql = "INSERT INTO  product(name,listgroup,rate,gst,supply,unit)VALUES('$name','$listgroup','$rate','$gst','$supply','$unit')";
+        $sql = "INSERT INTO  product(name,listgroup,rate,gst,supplier,unit)VALUES('$name','$listgroup','$rate','$gst','$supplier','$unit')";
 
         $this->connection->query($sql);
 

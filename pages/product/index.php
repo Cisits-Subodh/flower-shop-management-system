@@ -32,7 +32,7 @@ $products =$product->getAll();
                         <th>Name</th>
                         <th>List</th>
                         <th>Unit</th>
-                        <th>Supply of </th>
+                        <th>Supply of product</th>
                         <th>Rate</th>
                         <th>gst</th>
                     </tr>
@@ -43,7 +43,7 @@ $products =$product->getAll();
                             <td><?= $product['name'] ?></td>
                             <td><?= $product['listgroup'] ?></td>
                             <td><?= $product['unit'] ?></td>
-                            <td><?= $product['supply'] ?></td>
+                            <td><?= $product['supplier'] ?></td>
                             <td><?= $product['rate'] ?></td>
                             <td><?= $product['gst'] ?></d>
                             <td><a href="">View</a> <a href="">Edit</a></td>

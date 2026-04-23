@@ -30,8 +30,16 @@ class StaffController
         $name = $_POST['name'];
         $gender = $_POST['gender'];
         $dob = $_POST['dob'];
+        $adress =$_POST['adress'];
+        $district=$_POST['district'];
+        $city=$_POST['city'];
+        $state=$_POST['state'];
+        $mobile=$_POST['mobile'];
+        $pincode=$_POST['pincode'];
 
-        $sql = "INSERT INTO staff(name, gender, dob) VALUES('$name', '$gender', '$dob')";
+    
+
+        $sql = "INSERT INTO staff(name, gender, dob,adress,district,city,mobile,state,pincode) VALUES('$name', '$gender','$dob','$district','$state','$adress','$mobile',$city','$pincode')";
 
         $this->connection->query($sql);
 

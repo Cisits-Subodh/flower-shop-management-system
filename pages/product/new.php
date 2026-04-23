@@ -1,9 +1,18 @@
 <?php
 
 use Subod\FlowerShopManagementSystem\App\Utility\Listgroup;
+use Subod\FlowerShopManagementSystem\App\Utility\Unit;
+use Subod\FlowerShopManagementSystem\App\Utility\Supplier;
 
 $listGroup = new Listgroup();
 $listgroups = $listGroup->getAll();
+
+$unit = new Unit();
+$units = $unit->getAll();
+
+$supplier = new Supplier();
+$suppliers = $supplier->getAll();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,25 +37,48 @@ $listgroups = $listGroup->getAll();
             </div>
             <div class="new-form">
                 <form action="/product/create" method="post">
-                    <div class="">
+                    <div class="card-menu-l">
                         <label for=" ">Name</label>
                         <input type="text" name="name" id="name">
                     </div>
-                    <label for="">List</label>
-                    <select name="" id="">
-                        <?php foreach ($listgroups as $listgroup) { ?>
-                            <option value="<?= $listgroup['list'] ?>"><?= $listgroup['list'] ?></option>
-                        <?php } ?>
-                    </select>
-                    <input type="text" id="list" name="list">
-                    <label for="">Unit</label>
-                    <input type="text" id="unit" id="unit">
-                    <label for="">Supplier</label>
-                    <input type="text" name="supplier" id="supplier">
-                    <label for="">Rate</label>
-                    <input type="text" name="rate" id="rate">
-                    <label for="">GST</label>
-                    <input type="text" name="gst" id="gst">
+                    <div class="">
+
+                        <label for="">Rate</label>
+                        <input type="text" name="rate" id="rate">
+                    </div>
+                    <div class="card-menu-l">
+
+                        <label for="">GST</label>
+                        <input type="text" name="gst" id="gst">
+                    </div>
+
+                    <div class="">
+                        <label for="">Category</label>
+                        <select name="" id="">
+                            <?php foreach ($listgroups as $listgroup) { ?>
+                                <option value="<?= $listgroup['list'] ?>"><?= $listgroup['list'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+                    <div class="">
+
+                        <label for="">Unit</label>
+                        <select name="" id="">
+                            <?php foreach ($units as $unit) { ?>
+                                <option value="<?= $unit['unit'] ?>"><?= $unit['unit'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="">Supplier</label>
+                        <select name="" id="">
+                            <?php foreach ($suppliers as $supplier) { ?>
+                        <option value="<?= $supplier['supplier'] ?>"> <?= $supplier['supplier'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    
                     <button class="button-s">Submit</button>
                 </form>
             </div>

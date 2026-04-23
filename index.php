@@ -42,6 +42,12 @@ switch ($request) {
     case "/product/new":
         include $_SERVER['DOCUMENT_ROOT'] . "/pages/product/new.php";
         break;
+    case "/purchase":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/purchase/index.php";
+        break;
+    case "/purchase/new":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/purchase/new.php";
+        break;
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";
 }

@@ -23,21 +23,37 @@
     padding: 20px;
     height: 300%;
     gap: 10px;
+    position: relative;
+
 }
 
 .aside a:hover {
     background-color: blue;
-    padding: 10px;
+    padding: 5px;
     color: whitesmoke;
+    position: sticky;
+    overflow-y: auto;
 
 }
 
 .aside a {
+    position: relative;
     text-decoration: none;
 }
 
-.main {
-    padding: 20px
+.main{
+    padding: 20px;
+}
+/* product index     */
+.main h3{
+    background-color: coral;
+    text-align: center;
+    padding: 5px;
+}
+.main a{
+    padding: 10px;
+    gap: 10px;
+    text-decoration: none;
 }
 
 .card-menu {
@@ -45,10 +61,22 @@
     flex-wrap: wrap;
     gap: 1vw;
 }
-
-.card-menu .label {
-    display: block;
-    font-weight: bold;
+/* new product */
+.card-menu-l label {
+display: inline-block;
+    
+}
+/* staff */
+.head h3 {
+    background-color: coral;
+    margin-top: 0%;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 100%;
+}
+.card-menu-l input{
+    display: inline-block;
 }
 
 .card-menu div {
@@ -62,9 +90,9 @@
 
 .new-form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
+/* staff */
 .new-form input {
     display: block;
     padding: 5px;
@@ -88,14 +116,30 @@
     padding: 5px;
 }
 
-/* staff */
-.head h3 {
-    background-color: coral;
-    margin-top:0% ;
-    text-align: center;
-    border: 2px solid;
-    border-radius: 5px;
+
+
+.top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.top-section .left {}
+
+.top-section .right {
+    text-align: right;
+}
+
+.item-details {
     width: 100%;
+}
 
+.item-details input {
+    width: 100%;
+}
 
+.button-section {
+    margin-top: 20px;
 }

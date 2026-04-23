@@ -1,5 +1,9 @@
 <?php
 
+use Subod\FlowerShopManagementSystem\App\Utility\StockItem;
+
+$stockItem = new StockItem();
+$stockitemnames = $stockItem->getAllNames();
 ?>
 
 <!DOCTYPE html>
@@ -24,26 +28,54 @@
             <div class="head">
                 <h3>Purchase</h3>
             </div>
-            <div class="options">
-                <a href="/purchase" class="button">New Purchase</a>
+
+            <div class="top-section">
+                <div class="left">
+                    <label for="supplier_invoice_no">Supplier Invoice No</label>
+                    <input type="text" name="supplier_invoice_no" id="supplier_invoice_no">
+                </div>
+                <div class="right">
+                    <label for="date">Date</label>
+                    <input type="date" name="" id="">
+                </div>
             </div>
-            <table class="crud-table">
-                <thead class="border">
+
+            <table class="item-details">
+                <thead>
                     <tr>
-                        <th>S.No</th>
-                        <th>Particular</th>
-                        <th>Quty</th>
+                        <th>Sl#</th>
+                        <th>Particulars</th>
+                        <th>Quantity</th>
                         <th>Rate</th>
-                        <th>GST</th>
                         <th>Amount</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <?php foreach ($users as $user) { ?>
-                       
-                    <?php } ?>
+                    <tr>
+                        <td><input type="text" name="" id=""></td>
+                        <td>
+                            <input type="text" list="particularslist" name="particulars" id="particulars">
+                            <datalist id="particularslist">
+                                <?php foreach ($stockitemnames as $stockitemname) { ?>
+                                    <option value="<?= $stockitemname['name'] ?>"></option>
+                                <?php } ?>
+                            </datalist>
+                        </td>
+                        <td><input type="text" name="" id=""></td>
+                        <td><input type="text" name="" id=""></td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr>
                 </tbody>
             </table>
+
+            <div class="bottom-section">
+
+            </div>
+            <div class="button-section">
+                <button>Submit</button>
+                <button type="button">+</button>
+                <button type="button">-</button>
+            </div>
         </main>
     </div>
 </body>
