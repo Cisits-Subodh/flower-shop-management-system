@@ -73,11 +73,12 @@ $stockitemnames = $stockItem->getAllNames();
             </div>
             <div class="button-section">
                 <button>Submit</button>
-                <button type="button">+</button>
+                <button type="button" onclick="addRow()">+</button>
                 <button type="button">-</button>
             </div>
         </main>
     </div>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>

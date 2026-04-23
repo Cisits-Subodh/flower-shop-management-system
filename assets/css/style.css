@@ -29,7 +29,6 @@
 
 .aside a:hover {
     background-color: blue;
-    padding: 5px;
     color: whitesmoke;
     position: sticky;
     overflow-y: auto;
@@ -37,35 +36,39 @@
 }
 
 .aside a {
-    position: relative;
     text-decoration: none;
+    padding: 5px;
 }
 
-.main{
+.main {
     padding: 20px;
 }
+
 /* product index     */
-.main h3{
+.main h3 {
     background-color: coral;
+    margin-bottom: 10px;
     text-align: center;
     padding: 5px;
 }
-.main a{
+
+.main a {
     padding: 10px;
     gap: 10px;
     text-decoration: none;
 }
 
+/* dasbord */
 .card-menu {
     display: flex;
     flex-wrap: wrap;
     gap: 1vw;
 }
-/* new product */
-.card-menu-l label {
-display: inline-block;
-    
+
+.card-menu a {
+    display: block;
 }
+
 /* staff */
 .head h3 {
     background-color: coral;
@@ -75,7 +78,8 @@ display: inline-block;
     border-radius: 5px;
     width: 100%;
 }
-.card-menu-l input{
+
+.card-menu-l input {
     display: inline-block;
 }
 
@@ -92,6 +96,7 @@ display: inline-block;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 /* staff */
 .new-form input {
     display: block;

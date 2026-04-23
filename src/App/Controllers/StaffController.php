@@ -1,4 +1,5 @@
 <?php
+
 namespace Subod\FlowerShopManagementSystem\App\Controllers;
 
 use mysqli;
@@ -13,10 +14,7 @@ class StaffController
         $this->connection = DbConfig::getConnection();
     }
 
-    function get()
-    {
-
-    }
+    function get() {}
 
     function getAll()
     {
@@ -28,33 +26,28 @@ class StaffController
     function create()
     {
         $name = $_POST['name'];
+        $email=$_POST['email'];
         $gender = $_POST['gender'];
         $dob = $_POST['dob'];
-        $adress =$_POST['adress'];
-        $district=$_POST['district'];
-        $city=$_POST['city'];
-        $state=$_POST['state'];
-        $mobile=$_POST['mobile'];
-        $pincode=$_POST['pincode'];
+        $adress = $_POST['adress'];
+        $district = $_POST['district'];
+        $city = $_POST['city'];
+        $state = $_POST['state'];
+        $mobile = $_POST['mobile'];
+        $pincode = $_POST['pin_code'];
 
-    
 
-        $sql = "INSERT INTO staff(name, gender, dob,adress,district,city,mobile,state,pincode) VALUES('$name', '$gender','$dob','$district','$state','$adress','$mobile',$city','$pincode')";
+
+        $sql = "INSERT INTO staff(name,email, gender, dob,adress,district,city,mobile,state,pincode) VALUES('$name','$email','$gender','$dob','$district','$state','$adress','$mobile','$city','$pincode')";
 
         $this->connection->query($sql);
 
         header("location:/staff");
     }
 
-    function update()
-    {
+    function update() {}
 
-    }
-
-    function delete()
-    {
-
-    }
+    function delete() {}
 
     function count()
     {

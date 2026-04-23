@@ -55,7 +55,7 @@ class ProductController
 
     function count()
     {
-        $sql = "SELECT COUNT(product_id) FROM product";
+        $sql = "SELECT COUNT(id) FROM product";
         $result = $this->connection->query($sql);
         $row = $result->fetch_row();
         return $row[0];

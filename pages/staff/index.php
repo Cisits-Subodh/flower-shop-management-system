@@ -31,7 +31,8 @@ $users = $staffController->getAll();
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
-                        <th>Mobile-No.</th>
+                        <th>Email_id</th>
+                        <th>Mobile_no</th>
                         <th>DOB</th>
                         <th>Gender</th>
                         <th>Address</th>
@@ -46,8 +47,10 @@ $users = $staffController->getAll();
                         <tr>
                             <td><?= $user['staff_id'] ?></td>
                             <td><?= $user['name'] ?></td>
-                            <td><?= $user['gender'] ?></td>
+                            <td><?= $user['email'] ?></td>
+                            <td><?= $user['mobile'] ?></td>
                             <td><?= $user['dob'] ?></td>
+                            <td><?= $user['gender'] ?></td>
                             <td><?= $user['adress'] ?></td>
                             <td><?= $user['district'] ?></td>
                             <td><?= $user['city'] ?></td>

@@ -1,10 +1,4 @@
-<?php
 
-use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
-
-$staff= new StaffController;
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,19 +26,23 @@ $staff= new StaffController;
                     <label for=" ">Name</label>
                     <input type="text" name="name" id="name">
                     <label for="">Email-id</label>
-                    <input type="email" id="Email-id" name="email id" required>
+                    <input type="email" id="Email-id" name="email_id" required>
                     <label for=" ">Mobile-No</label>
-                    <input type="number" id="mobile-no" name="mobile-no" required>
+                    <input type="number" id="mobile" name="mobile" required>
                     <label for="">Date of Birth</label>
                     <input type="date" name="dob" id="dob" required>
                     <label for="">Gender</label>
                     <input type="text" name="gender" id="gender" required>
                     <label for="">Address</label>
-                    <input type="text" id="address" name="Address" required>
+                    <input type="text" id="adress" name="adress" required>
                     <label for="">District</label>
-                    <input type="text" id="District" name="District" required>
+                    <input type="text" id="district" name="district" required>
+                    <label for="">City</label>
+                    <input type="text"name="city"id="city" required>
+                    <label for="">State</label>
+                    <input type="text"name="state"id="state"required> 
                     <label for="">Pin Code</label>
-                    <input type="pin code" id="pin code" name="pin code" required>
+                    <input type="pin code" id="pin_code" name="pin_code" required>
 
                     <button class="button-s">Submit</button>
                 </form>

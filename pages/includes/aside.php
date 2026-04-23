@@ -6,4 +6,5 @@
     <a href="/sales">Sales</a>
     <a href="/staff">Staff</a>
     <a href="/report">Reports</a>
+    <a href="/setting">Setting</a>
 </nav>
