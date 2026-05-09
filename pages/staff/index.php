@@ -4,6 +4,7 @@ use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
 
 $staffController = new StaffController();
 $users = $staffController->getAll();
+
 ?>
 
 <!DOCTYPE html>

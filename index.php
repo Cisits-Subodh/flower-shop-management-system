@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . "/vendor/autoload.php";
 
+use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
+use Subod\FlowerShopManagementSystem\App\Controllers\PurchaseController;
 use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
 use Subod\FlowerShopManagementSystem\App\Controllers\UserController;
 
@@ -42,12 +44,19 @@ switch ($request) {
     case "/product/new":
         include $_SERVER['DOCUMENT_ROOT'] . "/pages/product/new.php";
         break;
+    case "/product/create":
+        $productController = new ProductController();
+        $productController->create();
+        break;
     case "/purchase":
         include $_SERVER['DOCUMENT_ROOT'] . "/pages/purchase/index.php";
         break;
     case "/purchase/new":
         include $_SERVER['DOCUMENT_ROOT'] . "/pages/purchase/new.php";
         break;
+    case "/purchase/create":
+        $purchaseController = new PurchaseController();
+        $purchaseController->create();
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";
 }

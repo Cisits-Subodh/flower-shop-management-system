@@ -28,57 +28,63 @@ $stockitemnames = $stockItem->getAllNames();
             <div class="head">
                 <h3>Purchase</h3>
             </div>
-
-            <div class="top-section">
-                <div class="left">
-                    <label for="supplier_invoice_no">Supplier Invoice No</label>
-                    <input type="text" name="supplier_invoice_no" id="supplier_invoice_no">
+            <form action="/purchase/create" method="post">
+                <div class="top-section">
+                    <div class="left">
+                        <label for="supplier_invoice_no">Supplier Invoice No</label>
+                        <input type="text" name="supplier_invoice_no" id="supplier_invoice_no">
+                    </div>
+                    <div class="right">
+                        <label for="date">Date</label>
+                        <input type="date" name="date" id="date">
+                    </div>
                 </div>
-                <div class="right">
-                    <label for="date">Date</label>
-                    <input type="date" name="" id="">
+
+                <table class="item-details" id="my-table">
+                    <thead>
+                        <tr>
+                            <th>Sl#</th>
+                            <th>Particulars</th>
+                            <th>Quantity</th>
+                            <th>Rate</th>
+                            <th>GST</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="" id="" value="1"></td>
+                            <td>
+                                <input type="text" list="particularslist" name="particulars" id="particulars">
+                                <datalist id="particularslist">
+                                    <?php foreach ($stockitemnames as $stockitemname) { ?>
+                                        <option value="<?= $stockitemname['name'] ?>"></option>
+                                    <?php } ?>
+                                </datalist>
+                            </td>
+                            <td><input type="text" name="quantity" id="quantity" onchange="calc(0)"></td>
+                            <td><input type="text" name="rate" id="rate" onchange="calc(0)"></td>
+                            <td><input type="text" name="gst" id="gst" </td>
+                            <td><input type="text" name="amount" id="amount"></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="bottom-section">
+
                 </div>
-            </div>
-
-            <table class="item-details">
-                <thead>
-                    <tr>
-                        <th>Sl#</th>
-                        <th>Particulars</th>
-                        <th>Quantity</th>
-                        <th>Rate</th>
-                        <th>Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" name="" id=""></td>
-                        <td>
-                            <input type="text" list="particularslist" name="particulars" id="particulars">
-                            <datalist id="particularslist">
-                                <?php foreach ($stockitemnames as $stockitemname) { ?>
-                                    <option value="<?= $stockitemname['name'] ?>"></option>
-                                <?php } ?>
-                            </datalist>
-                        </td>
-                        <td><input type="text" name="" id=""></td>
-                        <td><input type="text" name="" id=""></td>
-                        <td><input type="text" name="" id=""></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="bottom-section">
-
-            </div>
-            <div class="button-section">
-                <button>Submit</button>
-                <button type="button" onclick="addRow()">+</button>
-                <button type="button">-</button>
-            </div>
+                <div class="button-section">
+                    <button>Submit</button>
+                    <button type="button" onclick="addRow()">+</button>
+                    <button type="button" onclick="deleteRow()">-</button>
+                </div>
+            </form>
         </main>
+
     </div>
     <script src="/assets/js/script.js"></script>
+
 </body>
 
 </html>

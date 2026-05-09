@@ -32,20 +32,17 @@ class ProductController
     function create()
     {
         $name  = $_POST['name'];
-        $listgroup = $_POST['list'];
+        $listgroup = $_POST['listgroup'];
         $rate = $_POST['rate'];
         $gst = $_POST['gst'];
-        $supplier = $_POST['supplier'];
         $unit  = $_POST['unit'];
 
-
-
-        $sql = "INSERT INTO  product(name,listgroup,rate,gst,supplier,unit)VALUES('$name','$listgroup','$rate','$gst','$supplier','$unit')";
+        $sql = "INSERT INTO  product(name,listgroup,rate,gst,unit)VALUES('$name','$listgroup','$rate','$gst','$unit')";
 
         $this->connection->query($sql);
 
-        header("location:/");
- }
+        header("location:/product");
+    }
 
 
 
@@ -61,4 +58,3 @@ class ProductController
         return $row[0];
     }
 }
-

@@ -1,9 +1,9 @@
 <?php
-
 use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
 
-$product=new ProductController;
+$product=new ProductController();
 $products =$product->getAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +30,8 @@ $products =$product->getAll();
                 <thead class="border">
                     <tr>
                         <th>Name</th>
-                        <th>List</th>
+                        <th>Category</th>
                         <th>Unit</th>
-                        <th>Supply of product</th>
                         <th>Rate</th>
                         <th>gst</th>
                     </tr>
@@ -43,9 +42,8 @@ $products =$product->getAll();
                             <td><?= $product['name'] ?></td>
                             <td><?= $product['listgroup'] ?></td>
                             <td><?= $product['unit'] ?></td>
-                            <td><?= $product['supplier'] ?></td>
                             <td><?= $product['rate'] ?></td>
-                            <td><?= $product['gst'] ?></d>
+                            <td><?= $product['gst'] ?></td>
                             <td><a href="">View</a> <a href="">Edit</a></td>
                         </tr>
                     <?php } ?>

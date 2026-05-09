@@ -1,8 +1,6 @@
 <?php
-
 use Subod\FlowerShopManagementSystem\App\Utility\Listgroup;
 use Subod\FlowerShopManagementSystem\App\Utility\Unit;
-use Subod\FlowerShopManagementSystem\App\Utility\Supplier;
 
 $listGroup = new Listgroup();
 $listgroups = $listGroup->getAll();
@@ -10,8 +8,6 @@ $listgroups = $listGroup->getAll();
 $unit = new Unit();
 $units = $unit->getAll();
 
-$supplier = new Supplier();
-$suppliers = $supplier->getAll();
 
 ?>
 <!DOCTYPE html>
@@ -38,7 +34,7 @@ $suppliers = $supplier->getAll();
             <div class="new-form">
                 <form action="/product/create" method="post">
                     <div class="card-menu-l">
-                        <label for=" ">Name</label>
+                        <label for="name">Name</label>
                         <input type="text" name="name" id="name">
                     </div>
                     <div class="">
@@ -54,7 +50,7 @@ $suppliers = $supplier->getAll();
 
                     <div class="">
                         <label for="">Category</label>
-                        <select name="" id="">
+                        <select name="listgroup" id="">
                             <?php foreach ($listgroups as $listgroup) { ?>
                                 <option value="<?= $listgroup['list'] ?>"><?= $listgroup['list'] ?></option>
                             <?php } ?>
@@ -64,21 +60,12 @@ $suppliers = $supplier->getAll();
                     <div class="">
 
                         <label for="">Unit</label>
-                        <select name="" id="">
+                        <select name="unit" id="unit">
                             <?php foreach ($units as $unit) { ?>
                                 <option value="<?= $unit['unit'] ?>"><?= $unit['unit'] ?></option>
                             <?php } ?>
                         </select>
                     </div>
-                    <div class="">
-                        <label for="">Supplier</label>
-                        <select name="" id="">
-                            <?php foreach ($suppliers as $supplier) { ?>
-                        <option value="<?= $supplier['supplier'] ?>"> <?= $supplier['supplier'] ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                    
                     <button class="button-s">Submit</button>
                 </form>
             </div>

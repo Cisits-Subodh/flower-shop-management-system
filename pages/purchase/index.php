@@ -49,11 +49,13 @@ $purchases = $purchaseController->getAll();
                     <?php foreach ($purchases as $purchase) { ?>
                         <tr>
                             <?php $id = $purchase['id'] ?>
-                            <td><?= $purchase['']  ?></td>
-                            <td><?= $purchase[''] ?></td>
-                            <td><?= $purchase[''] ?></td>
-                            <td><?= $purchase[''] ?></td>
-                            <td><?= $purchase[''] ?></td>
+                            <td><?= $purchase['supplier_invoice_no']  ?></td>
+                            <td><?= $purchase['id'] ?></td>
+                            <td><?= $purchase['particulars'] ?></td>
+                            <td><?= $purchase['quantity'] ?></td>
+                            <td><?= $purchase['rate'] ?></td>
+                            <td><?= $purchase['gst'] ?></td>
+                            <td><?= $purchase['amount'] ?></td>
                         </tr>
 
                     <?php } ?>

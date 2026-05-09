@@ -31,11 +31,13 @@ class PurchaseController
 
     function create()
     {
-        $invoiceno = $_POST['invoice'];
-        $partyacname = $_POST['partyacname'];
-        $partyname = $_POST['partyname'];
-        $date = $_POST['date'];
+        $supplier_invoice_no= $_POST['supplier_invoice_no'];
+        $particulars = $_POST['particulars'];
+        $quantity= $_POST['quantity'];
+        $rate= $_POST['rate'];
+        $gst=$_POST['gst'];
+        $amount=$_POST['amount'];
 
-        $sql = " INSERT INTO purchase(invoice,partyacname,partname,date)VALUES('$invoiceno','$partyacname','$partyname','$date')";
+        $sql = " INSERT INTO purchase(supplier_invoice_no,particulars,quantity,rate,gst,amount,date)VALUES('$supplier_invoice_no','$particulars','$quantity','$rate','$gst','$amount)";
     }
 }

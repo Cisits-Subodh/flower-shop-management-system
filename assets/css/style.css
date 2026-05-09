@@ -44,7 +44,8 @@
     padding: 20px;
 }
 
-/* product index     */
+/* product index     */ 
+
 .main h3 {
     background-color: coral;
     margin-bottom: 10px;
@@ -121,8 +122,6 @@
     padding: 5px;
 }
 
-
-
 .top-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -131,10 +130,13 @@
     margin-bottom: 20px;
 }
 
-.top-section .left {}
+.top-section .left {
+    
+}
 
 .top-section .right {
     text-align: right;
+
 }
 
 .item-details {
@@ -143,8 +145,11 @@
 
 .item-details input {
     width: 100%;
-}
 
+}
 .button-section {
     margin-top: 20px;
+}
+.label-total label{
+    margin-right: 10%;  
 }
