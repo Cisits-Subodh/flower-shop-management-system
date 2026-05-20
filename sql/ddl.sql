@@ -42,3 +42,15 @@ CREATE TABLE purchase
     date VARCHAR()
     amount VARCHAR(50)
 );
+CREATE TABLE customer
+(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    mobile CHAR(10),
+    email VARCHAR(100),
+    address VARCHAR(100),
+    city VARCHAR(100),
+    district VARCHAR(100),
+    state VARCHAR(100),
+    pincode  VARCHAR(100)  
+);

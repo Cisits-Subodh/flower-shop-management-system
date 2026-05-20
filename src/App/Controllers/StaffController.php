@@ -26,19 +26,19 @@ class StaffController
     function create()
     {
         $name = $_POST['name'];
-        $email=$_POST['email'];
+        $mobile = $_POST['mobile'];
+        $email = $_POST['email'];
         $gender = $_POST['gender'];
         $dob = $_POST['dob'];
         $adress = $_POST['adress'];
         $district = $_POST['district'];
         $city = $_POST['city'];
         $state = $_POST['state'];
-        $mobile = $_POST['mobile'];
         $pincode = $_POST['pin_code'];
 
 
 
-        $sql = "INSERT INTO staff(name,email, gender, dob,adress,district,city,mobile,state,pincode) VALUES('$name','$email','$gender','$dob','$district','$state','$adress','$mobile','$city','$pincode')";
+        $sql = "INSERT INTO staff(name,mobile,email, gender, dob,adress,district,city,state,pincode) VALUES('$name','$mobile','$email','$gender','$dob','$adress','$district','$city','$state','$pincode')";
 
         $this->connection->query($sql);
 

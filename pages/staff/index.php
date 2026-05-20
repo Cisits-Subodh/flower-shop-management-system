@@ -23,6 +23,7 @@ $users = $staffController->getAll();
         <aside>
             <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
         </aside>
+        
         <main class="main">
             <h3>Staff</h3>
             <a href="/staff/new" class="button">New Staff</a>
@@ -39,6 +40,7 @@ $users = $staffController->getAll();
                         <th>District</th>
                         <th>State</th>
                         <th>Pin-code</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

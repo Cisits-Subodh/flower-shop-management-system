@@ -29,7 +29,6 @@
                     <input type="date"name="dob" id="dob" required>
                     <label for="">Gender</label>
                     <input type="text" name="gender" id="gender" required>
-                    
                     <label for="">City</label>
                     <input type="text" name="city" id="city" required>
                     <label for="">Address</label>

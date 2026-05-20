@@ -1,0 +1,11 @@
+{
+    "githubIssues.alwaysPromptForNewIssueRepo": true,
+    "githubIssues.createIssueTriggers": [
+        "TODO",
+        "todo",
+        "FIXME",
+        "ISSUE",
+        "HACK",
+        ""
+    ]
+}
