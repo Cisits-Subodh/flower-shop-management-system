@@ -48,7 +48,7 @@ $units = $unit->getAll();
                         <input type="text" name="gst" id="gst">
                     </div>
 
-                    <div class="">
+                    <div class="category">
                         <label for="">Category</label>
                         <select name="listgroup" id="">
                             <?php foreach ($listgroups as $listgroup) { ?>
@@ -57,7 +57,7 @@ $units = $unit->getAll();
                         </select>
                     </div>
 
-                    <div class="">
+                    <div class="category-u">
 
                         <label for="">Unit</label>
                         <select name="unit" id="unit">

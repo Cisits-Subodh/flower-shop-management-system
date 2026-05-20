@@ -30,3 +30,15 @@ CREATE TABLE supplier
 (
     name VARCHAR(20) PRIMARY KEY
 );
+CREATE TABLE purchase
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    supplier_invoice_no VARCHAR(50),
+    parti_name VARCHAR(50),
+    particulars VARCHAR(50),
+    quantity VARCHAR(50),
+    rate VARCHAR(20),
+    gst VARCHAR(10),
+    date VARCHAR()
+    amount VARCHAR(50)
+);

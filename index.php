@@ -57,6 +57,12 @@ switch ($request) {
     case "/purchase/create":
         $purchaseController = new PurchaseController();
         $purchaseController->create();
+    case "/customer":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/customer/index.php";
+        break;
+    case "/customer/new":
+        include $_SERVER['DOCUMENT_ROOT'] . "/pages/customer/new.php";
+        break;
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";
 }

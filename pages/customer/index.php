@@ -4,6 +4,7 @@ use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
 
 $staffController = new StaffController();
 $users = $staffController->getAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -24,19 +25,20 @@ $users = $staffController->getAll();
             <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
         </aside>
         <main class="main">
-            <h3>Staff</h3>
-            <a href="/staff/new" class="button">New Staff</a>
+            <h3>Customers</h3>
+           <h4>     h4> <a href="/staff/new" class="button">New Customers</a></
             <table class="crud-table">
                 <thead class="border">
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
+                        <th>Email_id</th>
                         <th>Mobile_no</th>
                         <th>DOB</th>
                         <th>Gender</th>
                         <th>Address</th>
-                        <th>City</th>
                         <th>District</th>
+                        <th>City</th>
                         <th>State</th>
                         <th>Pin-code</th>
                     </tr>
@@ -46,12 +48,13 @@ $users = $staffController->getAll();
                         <tr>
                             <td><?= $user['staff_id'] ?></td>
                             <td><?= $user['name'] ?></td>
+                            <td><?= $user['email_id'] ?></td>
                             <td><?= $user['mobile'] ?></td>
                             <td><?= $user['dob'] ?></td>
                             <td><?= $user['gender'] ?></td>
-                            <td><?= $user['adress'] ?></td>
-                            <td><?= $user['city'] ?></td>
+                            <td><?= $user['address'] ?></td>
                             <td><?= $user['district'] ?></td>
+                            <td><?= $user['city'] ?></td>
                             <td><?= $user['state'] ?></td>
                             <td><?= $user['pincode'] ?></td>
                             <td><a href="">View</a> <a href="">Edit</a></td>

@@ -33,7 +33,7 @@ $purchases = $purchaseController->getAll();
             <div class="options">
                 <a href="/purchase/new" class="button">New Purchase</a>
             </div>
-            
+
             <table class="crud-table">
                 <thead class="border">
                     <tr>
@@ -51,9 +51,11 @@ $purchases = $purchaseController->getAll();
                             <?php $id = $purchase['id'] ?>
                             <td><?= $purchase['supplier_invoice_no']  ?></td>
                             <td><?= $purchase['id'] ?></td>
+                            <td><?= $purchase['party_name'] ?></td>
                             <td><?= $purchase['particulars'] ?></td>
                             <td><?= $purchase['quantity'] ?></td>
                             <td><?= $purchase['rate'] ?></td>
+                            <td><?= $purchase['date'] ?></td>
                             <td><?= $purchase['gst'] ?></td>
                             <td><?= $purchase['amount'] ?></td>
                         </tr>

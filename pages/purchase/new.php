@@ -1,9 +1,14 @@
 <?php
 
+use Subod\FlowerShopManagementSystem\App\Utility\Gstlist;
 use Subod\FlowerShopManagementSystem\App\Utility\StockItem;
 
 $stockItem = new StockItem();
 $stockitemnames = $stockItem->getAllNames();
+
+$gstlist = new Gstlist();
+$gstlists = $gstlist->getAllNames();
+
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +28,7 @@ $stockitemnames = $stockItem->getAllNames();
     <div class="main-container">
         <aside>
             <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
+
         </aside>
         <main class="main">
             <div class="head">
@@ -33,7 +39,13 @@ $stockitemnames = $stockItem->getAllNames();
                     <div class="left">
                         <label for="supplier_invoice_no">Supplier Invoice No</label>
                         <input type="text" name="supplier_invoice_no" id="supplier_invoice_no">
+
+                        <div class="center">
+                            <label for="">Party Name</label>
+                            <input type="text" name="party_name" id="party_name">
+                        </div>
                     </div>
+
                     <div class="right">
                         <label for="date">Date</label>
                         <input type="date" name="date" id="date">
@@ -57,15 +69,28 @@ $stockitemnames = $stockItem->getAllNames();
                             <td>
                                 <input type="text" list="particularslist" name="particulars" id="particulars">
                                 <datalist id="particularslist">
+
                                     <?php foreach ($stockitemnames as $stockitemname) { ?>
                                         <option value="<?= $stockitemname['name'] ?>"></option>
                                     <?php } ?>
+
                                 </datalist>
+
                             </td>
+
                             <td><input type="text" name="quantity" id="quantity" onchange="calc(0)"></td>
                             <td><input type="text" name="rate" id="rate" onchange="calc(0)"></td>
-                            <td><input type="text" name="gst" id="gst" </td>
-                            <td><input type="text" name="amount" id="amount"></td>
+
+                            <td>
+                                <input type="text" name="" id="gst">
+                                <datalist id="gstlist">
+                                    <?php foreach ($gstlists as $gstlist) { ?>
+                                        <option value="<? $gstlist['gstlist'] ?>"> </option>
+                                    <?php }  ?>
+                                </datalist>
+                            </td>
+
+                            <td> <input type="text" name="amount" id="amount"></td>
 
                         </tr>
                     </tbody>
