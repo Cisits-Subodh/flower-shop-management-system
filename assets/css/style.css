@@ -52,13 +52,15 @@ product index     */
     margin-bottom: 10px;
     padding: 5px;
 }
-.category label{
+
+.category label {
     padding: 10px;
     display: inline-block;
 }
-.category-u label{
-padding: 10px;
-display: inline-block;
+
+.category-u label {
+    padding: 10px;
+    display: inline-block;
 
 }
 
@@ -101,21 +103,21 @@ display: inline-block;
     padding: 5px;
     text-align: center;
 }
+.new-form input{
+    display:flex;
+    /* flex-wrap:wrap; */
+    gap:10px;
 
-.new-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
-
-/* staff */
-.new-form input {
-    display: block;
-    padding: 5px;
-    margin-bottom: 10px;
-    width: 50%;
+.new-form label{
+   display:flex;
+    /* flex-wrap:wrap; */
+    gap:10px;
 }
 
 .crud-table {
+    margin-top: 10px;
     width: 100%;
     border-collapse: collapse;
 }
@@ -139,6 +141,7 @@ display: inline-block;
     margin-bottom: 20px;
 
 }
+
 /* purchase */
 .center input {
     width: 200px;
@@ -148,7 +151,8 @@ display: inline-block;
 
 
 }
-.center label{
+
+.center label {
     display: inline-flex;
     gap: 10%;
     margin-top: 2px;
@@ -187,4 +191,34 @@ display: inline-block;
     /* margin-left:5px; */
     margin-left: 2%;
     display: inline-block;
+}
+/* button */
+.button a{
+    background-color: blue;
+    color: white;
+    border-radius: 5px ;
+    padding:5px;
+}
+/* form divid */
+.form-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    padding: 10px;
+    
+}
+.inputgroup input{
+    display: grid;
+    gap: 10px;
+    padding: 2px;
+}
+.inputgroup label{
+    gap: 20px;
+    padding: 5px;
+}
+.button-s button{
+    background-color: brown;
+    color: white;
+    padding: 1%;
+    margin: 2px;
+    width: 30%;
 }

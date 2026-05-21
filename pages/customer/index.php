@@ -18,7 +18,7 @@
 
     <body>
         <header class="header">
-         <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/header.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/header.php" ?>
         </header>
         <div class="main-container">
             <aside>
@@ -26,7 +26,11 @@
             </aside>
             <main class="main">
                 <h3>Customer</h3>
-                <a href="/customer/new" class="button">new customer</a>
+                <div class="button">
+                    <a href="/customer/new" clas">New customer</a>
+                </div>
+
+
                 <table class="crud-table">
                     <thead class="border">
                         <tr>
@@ -43,25 +47,26 @@
 
                     </thead>
 
+
+                    <tbody>
+                        <?php foreach ($customers as $customer) { ?>
+                            <tr>
+                                <td><?= $customer['id']  ?></td>
+                                <td><?= $customer['name'] ?></td>
+                                <td><?= $customer['mobile'] ?></td>
+                                <td><?= $customer['email'] ?></td>
+                                <td><?= $customer['address'] ?></td>
+                                <td><?= $customer['city'] ?></td>
+                                <td><?= $customer['district'] ?></td>
+                                <td><?= $customer['state'] ?></td>
+                                <td><?= $customer['pincode'] ?></td>
+                            </tr>
+
+                        <?php } ?>
+
+
+                    </tbody>
                 </table>
-                <tbody>
-                    <?php foreach ($customers as $customer) { ?>
-                        <tr>
-                            <td><?= $customer['customer_id']  ?></td>
-                            <td><?= $customer['name'] ?></td>
-                            <td><?= $customer['mobile_no'] ?></td>
-                            <td><?= $customer['email'] ?></td>
-                            <td><?= $customer['address'] ?></td>
-                            <td><?= $customer['city'] ?></td>
-                            <td><?= $customer['district'] ?></td>
-                            <td><?= $customer['state'] ?></td>
-                            <td><?= $customer['pincode'] ?></td>
-                        </tr>
-
-                    <?php } ?>
-
-
-                </tbody>
             </main>
 
         </div>

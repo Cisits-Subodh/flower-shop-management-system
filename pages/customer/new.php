@@ -22,34 +22,60 @@
             <div class="head">
                 <h3>New Customer form</h3>
             </div>
-            <div new-form>
 
-                <form action="/customer/create" method="post">
+
+            <form action="/customer/create" method="post" class="form-2">
+
+                <div class="inputgroup">
                     <label for=" ">Name</label>
                     <input type="text" name="name" id="name">
-                    <label for="">Mobile-No</label>
+                </div>
+
+                <div class="inputgroup">
+                    <label for="">Mobile</label>
                     <input type="number" id="mobile" name="mobile" required>
+                </div>
+
+                <div class="inputgroup">
                     <label> Email_id</label>
-                    <input type="email" name="email_id" id="email_id" required>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="inputgroup">
                     <label for="">Date of Birth</label>
                     <input type="date" name="dob" id="dob" required>
+                </div>
+
+                <div class="inputgroup">
                     <label for="">Gender</label>
                     <input type="text" name="gender" id="gender" required>
+                </div>
+
+                <div class="inputgroup">
                     <label for="">Address</label>
                     <input type="text" id="address" name="address" required>
+                </div>
+                <div class="inputgroup">
                     <label for="">City</label>
                     <input type="text" name="city" id="city" required>
+                </div>
+                <div class="inputgroup">
                     <label for="">District</label>
                     <input type="text" id="district" name="district" required>
+                </div>
+                <div class="inputgroup">
                     <label for="">State</label>
                     <input type="text" name="state" id="state" required>
+                </div>
+                <div class="inputgroup">
                     <label for="">Pin Code</label>
-                    <input type="pin code" id="pin_code" name="pin_code" required>
-                    <button class="button-s">Submit</button>
-                </form>
-            </div>
-    </div>
-    </main>
+                    <input type="text" id="pincode" name="pincode" required>
+                </div>
+                <div class="button-s">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </main>
     </div>
 </body>
 

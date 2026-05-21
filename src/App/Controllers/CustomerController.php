@@ -21,7 +21,7 @@ class CustomerController
    function create()
    {
       $name = $_POST['name'];
-      $mobile_no = $_POST['mobile_no'];
+      $mobile_no= $_POST['mobile'];
       $email = $_POST['email'];
       $address = $_POST['address'];
       $city = $_POST['city'];
@@ -29,7 +29,7 @@ class CustomerController
       $state = $_POST['state'];
       $pincode = $_POST['pincode'];
 
-      $sql = "INSERT INTO customer(name,email,mobile,address,city,district,state,pincode)VALUES('$name','$mobile_no','$email','$address','$city','$district','$state','$pincode')";
+      $sql = "INSERT INTO customer(name,mobile,email,address,city,district,state,pincode)VALUES('$name','$mobile_no','$email','$address','$city','$district','$state','$pincode')";
 
 
       $this->connection->query($sql);

@@ -39,7 +39,6 @@
                     <input type="text" name="state" id="state" required>
                     <label for="">Pin Code</label>
                     <input type="pin code" id="pin_code" name="pin_code" required>
-
                     <button class="button-s">Submit</button>
                 </form>
             </div>
