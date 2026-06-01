@@ -30,7 +30,7 @@ $purchases = $purchaseController->getAll();
                 <h3>Purchase</h3>
             </div>
 
-            <div class="options">
+            <div class="button">
                 <a href="/purchase/new" class="button">New Purchase</a>
             </div>
 

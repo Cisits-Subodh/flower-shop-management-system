@@ -21,7 +21,7 @@
     background-color: coral;
     flex-direction: column;
     padding: 20px;
-    height: 300%;
+    height: 150%;
     gap: 10px;
     position: relative;
 
@@ -221,4 +221,8 @@ product index     */
     padding: 1%;
     margin: 2px;
     width: 30%;
+}
+/* supplier */
+.h-3{
+    text-align: center;
 }

@@ -25,7 +25,10 @@ $products =$product->getAll();
         </aside>
         <main class="main">
             <h3>Product</h3>
-            <a href="/product/new" class="button">New Product</a>
+            <div class="button">
+            <a href="/product/new">New Product</a>
+
+            </div>
             <table class="crud-table">
                 <thead class="border">
                     <tr>

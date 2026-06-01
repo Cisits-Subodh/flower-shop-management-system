@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . "/vendor/autoload.php";
 
+use FlowerShopManagementSystem\App\Controllers\SupplierController;
 use Subod\FlowerShopManagementSystem\App\Controllers\CustomerController;
 use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
 use Subod\FlowerShopManagementSystem\App\Controllers\PurchaseController;
@@ -8,7 +9,7 @@ use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
 use Subod\FlowerShopManagementSystem\App\Controllers\UserController;
 
 $request = $_SERVER['REQUEST_URI'];
-
+ 
 switch ($request) {
     case "/":
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/user/login.php";
@@ -23,12 +24,12 @@ switch ($request) {
     case "/user/staff-dashboard":
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/user/staff-dashboard.php";
         break;
-    case "/master":
-        require $_SERVER['DOCUMENT_ROOT'] . "/pages/master/index.php";
-        break;
-    case "/master/decoration":
-        include $_SERVER['DOCUMENT_ROOT'] . "/pages/master/decoration/index.php";
-        break;
+    // case "/master":
+    //     require $_SERVER['DOCUMENT_ROOT'] . "/pages/master/index.php";
+    //     break;
+    // case "/master/decoration":
+    //     include $_SERVER['DOCUMENT_ROOT'] . "/pages/master/decoration/index.php";
+    //     break;
     case "/staff":
         include $_SERVER['DOCUMENT_ROOT'] . "/pages/staff/index.php";
         break;
@@ -67,7 +68,16 @@ switch ($request) {
     case "/customer/create":
         $customerController = new CustomerController();
         $customerController->create();
-
+    case"/supplier":
+        include $_SERVER['DOCUMENT_ROOT']."/pages/supplier/index.php";
+        break;
+    case"/supplier/new":
+        include $_SERVER['DOCUMENT_ROOT']."/pages/supplier/new.php";
+        break;
+    case"/supplier/create":
+        $supplierController = new SupplierController();
+        $supplierController->create();
+        break;
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";
 }

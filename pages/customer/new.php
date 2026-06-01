@@ -23,8 +23,8 @@
                 <h3>New Customer form</h3>
             </div>
 
-
             <form action="/customer/create" method="post" class="form-2">
+                
 
                 <div class="inputgroup">
                     <label for=" ">Name</label>

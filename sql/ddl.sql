@@ -28,7 +28,14 @@ CREATE TABLE staff
 );
 CREATE TABLE supplier
 (
-    name VARCHAR(20) PRIMARY KEY
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    business_name VARCHAR(20),
+    supplier_name VARCHAR(50),
+    mobile_no CHAR(10),
+    email_id VARCHAR(30),
+    office_address VARCHAR(50),
+    gst VARCHAR(10),
+    payment_terms VARCHAR(50)
 );
 CREATE TABLE purchase
 (

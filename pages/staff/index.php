@@ -26,7 +26,9 @@ $users = $staffController->getAll();
         
         <main class="main">
             <h3>Staff</h3>
-            <a href="/staff/new" class="button">New Staff</a>
+            <div class="button">
+            <a href="/staff/new">New Staff</a>
+            </div>
             <table class="crud-table">
                 <thead class="border">
                     <tr>

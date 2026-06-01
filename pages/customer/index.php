@@ -27,14 +27,13 @@
             <main class="main">
                 <h3>Customer</h3>
                 <div class="button">
-                    <a href="/customer/new" clas">New customer</a>
+                    <a href="/customer/new">New customer</a>
                 </div>
-
-
+                
                 <table class="crud-table">
                     <thead class="border">
                         <tr>
-                            <th>Customer_id</th>
+                            <th>Customer id</th>
                             <th>Name</th>
                             <th>Mobile no</th>
                             <th>Email</th>
@@ -63,12 +62,9 @@
                             </tr>
 
                         <?php } ?>
-
-
                     </tbody>
                 </table>
             </main>
-
         </div>
 
     </body>
