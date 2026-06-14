@@ -39,7 +39,8 @@
     text-decoration: none;
     padding: 5px;
 }
-.main button{
+
+.main button {
     padding: 2px;
     margin: 2px;
 }
@@ -107,17 +108,19 @@ product index     */
     padding: 5px;
     text-align: center;
 }
-.new-form input{
-    display:flex;
+
+.new-form input {
+    display: flex;
     /* flex-wrap:wrap; */
-    gap:10px;
+    gap: 10px;
 
 
 }
-.new-form label{
-   display:flex;
+
+.new-form label {
+    display: flex;
     /* flex-wrap:wrap; */
-    gap:10px;
+    gap: 10px;
 }
 
 .crud-table {
@@ -196,37 +199,90 @@ product index     */
     margin-left: 2%;
     display: inline-block;
 }
+
 /* button */
-.button a{
+.button a {
     background-color: blue;
     color: white;
-    border-radius: 5px ;
-    padding:5px;
+    border-radius: 5px;
+    padding: 5px;
 }
+
 /* form divid */
-.form-2{
+.form-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 10px;
-    
+
 }
-.inputgroup input{
+
+.inputgroup input {
     display: grid;
     gap: 10px;
     padding: 2px;
 }
-.inputgroup label{
+
+.inputgroup label {
     gap: 20px;
     padding: 5px;
 }
-.button-s button{
+
+.button-s button {
     background-color: brown;
     color: white;
     padding: 1%;
     margin: 2px;
     width: 30%;
 }
+
 /* supplier */
-.head h3{
+.head h3 {
     text-align: center;
+}
+
+
+/* login page */
+
+.full {
+    margin-top: 10%;
+    justify-self: center;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    color: white;
+    position: absolute;
+    border-radius: none;
+    background-color: rgb(77, 7, 7);
+    
+}
+
+.inputbox input {
+    align-content: center;
+    padding: 8px;
+    margin: 5px;
+    width: 80%;
+    height: 50%;
+    border-radius: 2px solid;
+    border-radius: 20px;
+    border:none;
+    text-align: 50px;
+    border-bottom: 1.5px;
+
+
+}
+
+.hed h1 {
+    align-items: center;
+    text-align: center;
+    font-style: oblique;
+}
+
+.button button{
+    align-items: center;
+    padding: 8px;
+    margin: 10px;
+    width: 20%;
+    height: 50%;
+    font-size: medium;
+    border: none;
 }
