@@ -8,6 +8,7 @@
 <body>
     <h1>Login</h1>
     <form action="/user/authenticate" method="post">
+        <div></div>
         <input type="text" name="user_id" id="user_id" placeholder="User Id">
         <input type="password" name="password" id="password" placeholder="Password">
         <button>Login</button>

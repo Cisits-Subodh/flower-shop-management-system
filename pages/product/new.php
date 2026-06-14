@@ -50,7 +50,7 @@ $units = $unit->getAll();
 
                     <div class="category">
                         <label for="">Category</label>
-                        <select name="listgroup" id="">
+                        <select name="listgroup" id="listgroup">
                             <?php foreach ($listgroups as $listgroup) { ?>
                                 <option value="<?= $listgroup['list'] ?>"><?= $listgroup['list'] ?></option>
                             <?php } ?>
@@ -60,6 +60,7 @@ $units = $unit->getAll();
                     <div class="category-u">
 
                         <label for="">Unit</label>
+                        
                         <select name="unit" id="unit">
                             <?php foreach ($units as $unit) { ?>
                                 <option value="<?= $unit['unit'] ?>"><?= $unit['unit'] ?></option>

@@ -28,14 +28,13 @@ CREATE TABLE staff
 );
 CREATE TABLE supplier
 (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    business_name VARCHAR(20),
     supplier_name VARCHAR(50),
     mobile_no CHAR(10),
     email_id VARCHAR(30),
-    office_address VARCHAR(50),
+    address VARCHAR(50),
     gst VARCHAR(10),
-    payment_terms VARCHAR(50)
+    bank_ac VARCHAR(50),
+    pincode VARCHAR(20)
 );
 CREATE TABLE purchase
 (
@@ -60,4 +59,11 @@ CREATE TABLE customer
     district VARCHAR(100),
     state VARCHAR(100),
     pincode  VARCHAR(100)  
+);
+CREATE TABLE bank_ac
+(
+    cash VARCHAR PRIMARY KEY,
+    upi VARCHAR PRIMARY KEY,
+    online_payment VARCHAR PRIMARY KEY,
+    card VARCHAR PRIMARY KEY
 );

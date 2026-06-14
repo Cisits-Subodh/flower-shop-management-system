@@ -21,12 +21,16 @@
             </div>
             <div class="new-form">
                 <form action="/staff/create" method="post">
-                    <label for=" ">Name</label>
-                    <input type="text" name="name" id="name">
-                    <label for="">Mobile-No</label>
-                    <input type="number" id="mobile" name="mobile" required>
+                    <div>
+                        <label for=" ">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label for="">Mobile-No</label>
+                        <input type="number" id="mobile" name="mobile" required>
+                    </div>
                     <label for="">Date of Birth</label>
-                    <input type="date"name="dob" id="dob" required>
+                    <input type="date" name="dob" id="dob" required>
                     <label for="">Gender</label>
                     <input type="text" name="gender" id="gender" required>
                     <label for="">City</label>
@@ -34,7 +38,7 @@
                     <label for="">Address</label>
                     <input type="text" id="adress" name="adress" required>
                     <label for="">District</label>
-                    <input type="text"id="district" name="district" required>
+                    <input type="text" id="district" name="district" required>
                     <label for="">State</label>
                     <input type="text" name="state" id="state" required>
                     <label for="">Pin Code</label>

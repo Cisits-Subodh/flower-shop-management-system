@@ -40,7 +40,7 @@ class PurchaseController
         $gst = $_POST['gst'];
         $amount = $_POST['amount'];
 
-        $sql = " INSERT INTO purchase(supplier_invoice_no,particulars,party_name,quantity,rate,gst,amount,date)VALUES('$supplier_invoice_no','$party_name','$particulars','$date','$quantity','$rate','$gst','$amount)";
+        $sql = " INSERT INTO purchase(supplier_invoice_no,particulars,party_name,quantity,rate,gst,amount,date)VALUES('$supplier_invoice_no','$party_name','$particulars','$date','$quantity','$rate','$gst','$amount')";
 
         $this->connection->query($sql);
         

@@ -1,3 +1,9 @@
+<?php
+
+
+
+print_r($payments);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,14 +29,6 @@
 
             <form action="/supplier/create" method="post" class="from-2">
                 <div class="inputgroup">
-                    <label for="">S.No.</label>
-                    <input type="text" name="s_no" id="s_no">
-                </div>
-                <div class="inputgroup">
-                    <label>Business Name</label>
-                    <input type="text" name="business_name" id="business_name" required>
-                </div>
-                <div class="inputgroup">
                     <label for="">Suppler Name</label>
                     <input type="text" name="supplier_name" id="supplier_name" required>
                 </div>
@@ -47,18 +45,20 @@
                     <input type="text" name="office_address" id="required>
                 </div>
                 <div class=" inputgroup">
-                    <label for="">GST</label>
+                    <label for="">GSTINI</label>
                     <input type=" text" name="gst" id="gst" required>
-                    <label for="">Payment Terms</label>
-                    <input type="text" name="payment_terms" id="payment_terms" required>
                 </div>
                 <div class="inputgroup">
                     <label for="">Bank A/C</label>
                     <input type="number" name="back_ac" id="bank_ac" required>
-                    <label for="">Date</label>
-                    <input type="date" name="date" id="date" required>
+
                 </div>
-                <div class="">
+                <div class="inputgroup">
+                    <label>Pin Code</label>
+                    <input type="number"name="pincode"id="pincode"required>
+
+                </div>
+                <div class="button">
                     <button>submit</button>
 
                 </div>

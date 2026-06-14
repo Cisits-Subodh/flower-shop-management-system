@@ -39,6 +39,10 @@
     text-decoration: none;
     padding: 5px;
 }
+.main button{
+    padding: 2px;
+    margin: 2px;
+}
 
 .main {
     padding: 20px;
@@ -223,6 +227,6 @@ product index     */
     width: 30%;
 }
 /* supplier */
-.h-3{
+.head h3{
     text-align: center;
 }
