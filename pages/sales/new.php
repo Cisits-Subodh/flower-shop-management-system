@@ -45,19 +45,17 @@ foreach ($products as $product) {
         </aside>
         <main class="main">
             <div class="head">
-                <h3>Purchase</h3>
+                <h3>Sale</h3>
 
             </div>
-            <form action="/purchase/create" method="post">
+            <form action="/sales/create" method="post">
                 <div class="top-section">
                     <div class="left">
-                        <label for="supplier_invoice_no">Supplier Invoice No</label>
-                        <input type="text" name="supplier_invoice_no" id="supplier_invoice_no">
 
                         <div class="center">
-                            <label for="">Supplier</label>
+                            <label for="">Customer</label>
 
-                            <select name="supplier" id="supplier">
+                            <select name="customer" id="customer">
 
                                 <?php foreach ($suppliers as $supplier) { ?>
                                     <option value="<?= $supplier['id'] ?>"><?= $supplier['supplier_name'] ?></option>
@@ -192,6 +190,10 @@ foreach ($products as $product) {
             document.getElementsByName("amount[]")[e].value = amt;
 
         }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('date').valueAsDate = new Date();
+        });
     </script>
 
 </body>

@@ -27,6 +27,15 @@
 
 }
 
+/* supplier */
+/* .border tr th{
+    text-align: center;
+
+} */
+
+
+/*    */
+
 .aside a:hover {
     background-color: blue;
     color: whitesmoke;
@@ -199,6 +208,13 @@ product index     */
     margin-left: 2%;
     display: inline-block;
 }
+
+
+.bottam{
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 /* button */
 .button a {

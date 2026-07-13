@@ -1,9 +1,12 @@
 <?php
 
 use Subod\FlowerShopManagementSystem\App\Controllers\PurchaseController;
+use Subod\FlowerShopManagementSystem\App\Controllers\SupplierController;
 
 $purchaseController = new PurchaseController();
 $purchases = $purchaseController->getAll();
+
+$supplierController = new SupplierController();
 ?>
 
 <!DOCTYPE html>
@@ -33,31 +36,24 @@ $purchases = $purchaseController->getAll();
             <div class="button">
                 <a href="/purchase/new" class="button">New Purchase</a>
             </div>
-
             <table class="crud-table">
                 <thead class="border">
                     <tr>
                         <th>S.No</th>
-                        <th>Particular</th>
-                        <th>Quty</th>
-                        <th>Rate</th>
-                        <th>GST</th>
-                        <th>Amount</th>
+                        <th>Supplier Invoice No.</th>
+                        <th>Supplier Name</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($purchases as $purchase) { ?>
+                    <?php foreach ($purchases as $purchase) {
+                        $supplier = $supplierController->get($purchase['supplier_id']);
+                    ?>
                         <tr>
-                            <?php $id = $purchase['id'] ?>
-                            <td><?= $purchase['supplier_invoice_no']  ?></td>
                             <td><?= $purchase['id'] ?></td>
-                            <td><?= $purchase['party_name'] ?></td>
-                            <td><?= $purchase['particulars'] ?></td>
-                            <td><?= $purchase['quantity'] ?></td>
-                            <td><?= $purchase['rate'] ?></td>
+                            <td><?= $purchase['supplier_invoice_no']  ?></td>
+                            <td><?= $supplier['supplier_name'] ?></td>
                             <td><?= $purchase['date'] ?></td>
-                            <td><?= $purchase['gst'] ?></td>
-                            <td><?= $purchase['amount'] ?></td>
                         </tr>
 
                     <?php } ?>

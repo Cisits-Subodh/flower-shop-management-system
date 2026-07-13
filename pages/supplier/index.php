@@ -35,7 +35,9 @@ $suppliers = $supplierController->getAll();
             <table class="crud-table">
                 <thead class="border">
                     <tr>
+                        <!-- <th></th> -->
                         <th>S.No.</th>
+                        <!-- <th></th> -->
                         <th>Supplier Name</th>
                         <th>Mobile No</th>
                         <th>Email Id</th>
@@ -47,16 +49,16 @@ $suppliers = $supplierController->getAll();
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="border">
                     <?php foreach ($suppliers as $supplier) { ?>
                         <tr>
-
+                            <td><?= $supplier['id'] ?></td>
                             <td><?= $supplier['supplier_name'] ?></td>
-                            <td><?= $supplier['mobile_No'] ?></td>
+                            <td><?= $supplier['mobile_no'] ?></td>
                             <td><?= $supplier['email_id'] ?></td>
                             <td><?= $supplier['address'] ?></td>
                             <td><?= $supplier['gst'] ?></td>
-                            <td><?= $supplier['bank-ac'] ?></td>
+                            <td><?= $supplier['bank_ac'] ?></td>
                             <td><?= $supplier['pincode'] ?></td>
                             <td></td>
                         </tr>

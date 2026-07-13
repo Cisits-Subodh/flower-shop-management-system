@@ -1,9 +1,3 @@
-<?php
-
-
-
-print_r($payments);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,28 +28,28 @@ print_r($payments);
                 </div>
                 <div class="inputgroup">
                     <label>Mobile No</label>
-                    <input type="number" name="mobile_no" id="mobile_no" required>
+                    <input type="text" name="mobile_no" id="mobile_no" required>
                 </div>
                 <div class="inputgroup">
                     <label for="">Email Id</label>
-                    <input type="email" name="email_id" id="email_id" required>
+                    <input type="email" name="email_id" id="email_id">
                 </div>
                 <div class="inputgroup">
                     <label for="">Office Address</label>
-                    <input type="text" name="office_address" id="required>
+                    <input type="text" name="address" id="address">
                 </div>
                 <div class=" inputgroup">
                     <label for="">GSTINI</label>
-                    <input type=" text" name="gst" id="gst" required>
+                    <input type=" text" name="gst" id="gst">
                 </div>
                 <div class="inputgroup">
                     <label for="">Bank A/C</label>
-                    <input type="number" name="back_ac" id="bank_ac" required>
+                    <input type="text" name="back_ac" id="bank_ac">
 
                 </div>
                 <div class="inputgroup">
                     <label>Pin Code</label>
-                    <input type="number"name="pincode"id="pincode"required>
+                    <input type="number" name="pincode" id="pincode">
 
                 </div>
                 <div class="button">
