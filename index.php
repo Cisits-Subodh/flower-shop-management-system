@@ -85,6 +85,15 @@ switch ($request) {
         $salesController =new SalesController();
         $salesController->create();
         break;
+    case"/order":
+        include $_SERVER['DOCUMENT_ROOT']."/pages/order/index.php";
+        break;
+    case"/order/new":
+        include $_SERVER['DOCUMENT_ROOT']."/pages/order/new.php";
+        break;
+    case "/order/create":
+        break;
+        
 
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";

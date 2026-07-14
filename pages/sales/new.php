@@ -1,5 +1,6 @@
 <?php
 
+use Subod\FlowerShopManagementSystem\App\Controllers\CustomerController;
 use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
 use Subod\FlowerShopManagementSystem\App\Controllers\SupplierController;
 use Subod\FlowerShopManagementSystem\App\Utility\Gstlist;
@@ -11,8 +12,8 @@ $products = $productController->getAll();
 $gstlist = new Gstlist();
 $gstlists = $gstlist->getAllNames();
 
-$supplierController = new SupplierController();
-$suppliers = $supplierController->getAll();
+$customerController = new CustomerController();
+$customers = $customerController->getAll();
 
 
 $options = '';
@@ -57,8 +58,8 @@ foreach ($products as $product) {
 
                             <select name="customer" id="customer">
 
-                                <?php foreach ($suppliers as $supplier) { ?>
-                                    <option value="<?= $supplier['id'] ?>"><?= $supplier['supplier_name'] ?></option>
+                                <?php foreach ($customers as $customer) { ?>
+                                    <option value="<?= $customer['id'] ?>"><?= $customer['name'] ?></option>
                                 <?php } ?>
                             </select>
                         </div>

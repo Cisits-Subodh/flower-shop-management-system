@@ -29,10 +29,10 @@ class SalesController
     {
         $this->connection->begin_transaction();
 
-        $supplier_id = $_POST['supplier'];
+        $customer_id = $_POST['customer'];
         $date = $_POST['date'];
 
-        $sql = "INSERT INTO sales(supplier_id,date) VALUES('$supplier_id','$date')";
+        $sql = "INSERT INTO sales(customer_id,date) VALUES('$customer_id','$date')";
 
         $this->connection->query($sql);
 
@@ -40,16 +40,17 @@ class SalesController
 
         $n = count($_POST['particulars']);
         for ($i = 0; $i < $n; $i++) {
-            $product_id = $_POST['particulars']['$i'];
-            $quantity = $_POST['quantity']['$i'];
-            $rate = $_POST['rate']['$i'];
-            $gst = $_POST['gst']['$i'];
-            $amount = $_POST['amount']['$i'];
+            $product_id = $_POST['particulars'][$i];
+            $quantity = $_POST['quantity'][$i];
+            $rate = $_POST['rate'][$i];
+            $gst = $_POST['gst'][$i];
+            $amount = $_POST['amount'][$i];
 
             $sql = "INSERT INTO sales_item(sales_id,product_id,quantity,rate,gst,amount) VALUES('$sales_id','$product_id','$quantity','$rate','$gst','$amount')";
 
             $this->connection->query($sql);
         }
+        
         $this->connection->commit();
         header("location:/sales");
         exit;

@@ -1,6 +1,7 @@
 <?php
 
 namespace Subod\FlowerShopManagementSystem\App\Controllers;
+
 use mysqli;
 
 use Subod\FlowerShopManagementSystem\App\Config\DbConfig;
@@ -12,6 +13,12 @@ class CustomerController
    {
       $this->connection = DbConfig::getConnection();
    }
+   function get(int $id)
+   {
+      $sql = "SELECT * FROM customer WHERE id='$id'";
+      $result = $this->connection->query($sql);
+      return $result->fetch_assoc();
+   }
    function getAll()
    {
       $sql = "SELECT * FROM customer";
@@ -21,7 +28,7 @@ class CustomerController
    function create()
    {
       $name = $_POST['name'];
-      $mobile_no= $_POST['mobile'];
+      $mobile_no = $_POST['mobile'];
       $email = $_POST['email'];
       $address = $_POST['address'];
       $city = $_POST['city'];
