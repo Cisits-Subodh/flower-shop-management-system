@@ -23,16 +23,25 @@ $users = $staffController->getAll();
         <aside>
             <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
         </aside>
+        
         <main class="main">
             <h3>Staff</h3>
-            <a href="/staff/new" class="button">New Staff</a>
+            <div class="button">
+            <a href="/staff/new">New Staff</a>
+            </div>
             <table class="crud-table">
                 <thead class="border">
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
-                        <th>Gender</th>
+                        <th>Mobile_no</th>
                         <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>District</th>
+                        <th>State</th>
+                        <th>Pin-code</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -41,8 +50,14 @@ $users = $staffController->getAll();
                         <tr>
                             <td><?= $user['staff_id'] ?></td>
                             <td><?= $user['name'] ?></td>
-                            <td><?= $user['gender'] ?></td>
+                            <td><?= $user['mobile'] ?></td>
                             <td><?= $user['dob'] ?></td>
+                            <td><?= $user['gender'] ?></td>
+                            <td><?= $user['adress'] ?></td>
+                            <td><?= $user['city'] ?></td>
+                            <td><?= $user['district'] ?></td>
+                            <td><?= $user['state'] ?></td>
+                            <td><?= $user['pincode'] ?></td>
                             <td><a href="">View</a> <a href="">Edit</a></td>
                         </tr>
                     <?php } ?>

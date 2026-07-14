@@ -13,7 +13,7 @@
     </header>
     <div class="main-container">
         <aside>
-             <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
         </aside>
         <main class="main">
             <div class="head">
@@ -21,22 +21,28 @@
             </div>
             <div class="new-form">
                 <form action="/staff/create" method="post">
-                    <label for=" ">Name</label>
-                    <input type="text" name="name" id="name">
-                    <label for="">Email-id</label>
-                    <input type="email" id="Email-id" name="email id" required>
-                    <label for="Mobile">Mobile-No</label>
-                    <input type="Mobile-No" id="mobile no" name="mobile no" required>
-                    <label for="dob">Date of Birth</label>
+                    <div>
+                        <label for=" ">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label for="">Mobile-No</label>
+                        <input type="number" id="mobile" name="mobile" required>
+                    </div>
+                    <label for="">Date of Birth</label>
                     <input type="date" name="dob" id="dob" required>
-                    <label for="">Address</label>
-                    <input type="text" id="address" name="Address" required>
-                    <label for="">District</label>
-                    <input type="text" id="District" name="District" required>
-                    <label for="">Pin Code</label>
-                    <input type="pin code" id="pin code" name="pin code" required>
-                    <label for="gender">Gender</label>
+                    <label for="">Gender</label>
                     <input type="text" name="gender" id="gender" required>
+                    <label for="">City</label>
+                    <input type="text" name="city" id="city" required>
+                    <label for="">Address</label>
+                    <input type="text" id="adress" name="adress" required>
+                    <label for="">District</label>
+                    <input type="text" id="district" name="district" required>
+                    <label for="">State</label>
+                    <input type="text" name="state" id="state" required>
+                    <label for="">Pin Code</label>
+                    <input type="pin code" id="pin_code" name="pin_code" required>
                     <button class="button-s">Submit</button>
                 </form>
             </div>

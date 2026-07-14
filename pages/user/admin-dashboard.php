@@ -1,9 +1,13 @@
 <?php
 
+use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
 use Subod\FlowerShopManagementSystem\App\Controllers\StaffController;
 
 $staffController = new StaffController();
 $staff_count = $staffController->count();
+
+$productController=new ProductController();
+$product_count=$productController->count();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +34,7 @@ $staff_count = $staffController->count();
                     <div class="card-menu">
                         <div>
                             <label class="label">Products</label>
-                            <a href="/product" class="data">10</a>
+                            <a href="/product" class="data"><?= $product_count ?></a>
                         </div>
                         <div>
                             <label class="label">Staff</label>

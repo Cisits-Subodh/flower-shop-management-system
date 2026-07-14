@@ -18,10 +18,7 @@
             <main class="main">
                 <h3>Dashboard</h3>
                 <div class="card-menu">
-                    <a href="/master">
-                        <div>
-                            <label>Master</label>
-                        </div>
+                    <a href=""></a>
                     </a>
                     <a href="/satff">
                         <div>
@@ -42,13 +39,16 @@
                     </a>
 
                     <a href="/">
-                    <div>
-                        <label>Notification Manage</label>
-                    </div>
+                        <div>
+                            <label>Notification Manage</label>
+                        </div>
                     </a>
-                    <div>
-                        <label>payment Status</label>
-                    </div>
+                    <a href="">
+                        <div>
+                            <label>payment Status</label>
+                        </div>
+                    </a>
+
                     <div>
                         <label>Reviews Mange</label>
                     </div>
@@ -80,7 +80,7 @@
                 </div>
             </main>
         </div>
-    </div>
+        </div>
     </main>
 </body>
 

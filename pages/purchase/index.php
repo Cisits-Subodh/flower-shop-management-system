@@ -1,13 +1,12 @@
 <?php
 
-use Subod\FlowerShopManagementSystem\App\Controllers\CustomerController;
-use Subod\FlowerShopManagementSystem\App\Controllers\SalesController;
+use Subod\FlowerShopManagementSystem\App\Controllers\PurchaseController;
+use Subod\FlowerShopManagementSystem\App\Controllers\SupplierController;
 
-$salesController = new SalesController();
-$sales = $salesController->getAll();
+$purchaseController = new PurchaseController();
+$purchases = $purchaseController->getAll();
 
-$customerController = new CustomerController();
-
+$supplierController = new SupplierController();
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +16,7 @@ $customerController = new CustomerController();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales</title>
+    <title>purchase</title>
 </head>
 
 <body>
@@ -30,35 +29,33 @@ $customerController = new CustomerController();
         </aside>
 
         <main class="main">
-            <marquee behavior="" direction="">Hi! My name is Subodh.</marquee>
             <div class="head">
-                <h3>Sales</h3>
+                <h3>Purchase</h3>
             </div>
 
             <div class="button">
-                <a href="/sales/new" class="button">New Sales</a>
+                <a href="/purchase/new" class="button">New Purchase</a>
             </div>
             <table class="crud-table">
                 <thead class="border">
                     <tr>
                         <th>S.No</th>
-                        <th>Customer Name </th>
+                        <th>Supplier Invoice No.</th>
+                        <th>Supplier Name</th>
                         <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
-
-                    <?php foreach ($sales as $sale) {
-                        $customer = $customerController->get($sale['customer_id']);
-
-
+                    <?php foreach ($purchases as $purchase) {
+                        $supplier = $supplierController->get($purchase['supplier_id']);
                     ?>
                         <tr>
-
-                            <td><?= $sale['id'] ?></td>
-                            <td> <a href="sales_item"> <?= $customer['name'] ?></a></td>
-                            <td><?= $sale['date'] ?></td>
+                            <td><?= $purchase['id'] ?></td>
+                            <td><?= $purchase['supplier_invoice_no']  ?></td>
+                            <td><?= $supplier['supplier_name'] ?></td>
+                            <td><?= $purchase['date'] ?></td>
                         </tr>
+
                     <?php } ?>
                 </tbody>
             </table>

@@ -18,27 +18,95 @@
 
 .aside {
     display: flex;
+    background-color: coral;
     flex-direction: column;
     padding: 20px;
+    height: 150%;
+    gap: 10px;
+    position: relative;
+
+}
+
+/* supplier */
+/* .border tr th{
+    text-align: center;
+
+} */
+
+
+/*    */
+
+.aside a:hover {
+    background-color: blue;
+    color: whitesmoke;
+    position: sticky;
+    overflow-y: auto;
+
 }
 
 .aside a {
     text-decoration: none;
+    padding: 5px;
+}
+
+.main button {
+    padding: 2px;
+    margin: 2px;
 }
 
 .main {
-    padding: 20px
+    padding: 20px;
 }
 
+/* ls
+product index     */
+
+.main h3 {
+    background-color: coral;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.category label {
+    padding: 10px;
+    display: inline-block;
+}
+
+.category-u label {
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.main a {
+    padding: 10px;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* dasbord */
 .card-menu {
     display: flex;
     flex-wrap: wrap;
     gap: 1vw;
 }
 
-.card-menu .label {
+.card-menu a {
     display: block;
-    font-weight: bold;
+}
+
+/* staff */
+.head h3 {
+    background-color: coral;
+    margin-top: 0%;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.card-menu-l input {
+    display: inline-block;
 }
 
 .card-menu div {
@@ -50,19 +118,22 @@
     text-align: center;
 }
 
-.new-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.new-form input {
+    display: flex;
+    /* flex-wrap:wrap; */
+    gap: 10px;
+
+
 }
 
-.new-form input {
-    display: block;
-    padding: 5px;
-    margin-bottom: 10px;
-    width: 50%;
+.new-form label {
+    display: flex;
+    /* flex-wrap:wrap; */
+    gap: 10px;
 }
 
 .crud-table {
+    margin-top: 10px;
     width: 100%;
     border-collapse: collapse;
 }
@@ -76,4 +147,158 @@
 
 .crud-table td {
     padding: 5px;
+}
+
+.top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+/* purchase */
+.center input {
+    width: 200px;
+    gap: 10%;
+    display: inline-block;
+    align-items: baseline;
+
+
+}
+
+.center label {
+    display: inline-flex;
+    gap: 10%;
+    margin-top: 2px;
+    align-items: baseline;
+
+}
+
+
+.top-section .right {
+    text-align: right;
+    align-items: right;
+    /* margin-left:170%; */
+    display: inline-block;
+
+}
+
+.item-details {
+    width: 100%;
+}
+
+.item-details input {
+    width: 100%;
+
+}
+
+.button-section {
+    margin-top: 20px;
+}
+
+.label-total label {
+    margin-right: 10%;
+}
+
+/* purchase */
+.input-header label {
+    /* margin-left:5px; */
+    margin-left: 2%;
+    display: inline-block;
+}
+
+
+.bottam{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* button */
+.button a {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* form divid */
+.form-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+
+}
+
+.inputgroup input {
+    display: grid;
+    gap: 10px;
+    padding: 2px;
+}
+
+.inputgroup label {
+    gap: 20px;
+    padding: 5px;
+}
+
+.button-s button {
+    background-color: brown;
+    color: white;
+    padding: 1%;
+    margin: 2px;
+    width: 30%;
+}
+
+/* supplier */
+.head h3 {
+    text-align: center;
+}
+
+
+/* login page */
+
+.full {
+    margin-top: 10%;
+    justify-self: center;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    color: white;
+    position: absolute;
+    border-radius: none;
+    background-color: rgb(77, 7, 7);
+    
+}
+
+.inputbox input {
+    align-content: center;
+    padding: 8px;
+    margin: 5px;
+    width: 80%;
+    height: 50%;
+    border-radius: 2px solid;
+    border-radius: 20px;
+    border:none;
+    text-align: 50px;
+    border-bottom: 1.5px;
+
+
+}
+
+.hed h1 {
+    align-items: center;
+    text-align: center;
+    font-style: oblique;
+}
+
+.button button{
+    align-items: center;
+    padding: 8px;
+    margin: 10px;
+    width: 20%;
+    height: 50%;
+    font-size: medium;
+    border: none;
 }

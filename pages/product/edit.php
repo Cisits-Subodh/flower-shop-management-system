@@ -1,10 +1,11 @@
 <?php
+
 use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
 
-$product=new ProductController();
-$products =$product->getAll();
-
+$productController = new ProductController();
+$products = $productController->getAll();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,30 +25,35 @@ $products =$product->getAll();
             <?php include $_SERVER['DOCUMENT_ROOT'] . "/pages/includes/aside.php" ?>
         </aside>
         <main class="main">
-            <h3>Product</h3>
-            <div class="button">
-            <a href="/product/new">New Product</a>
-
+            <div class="head">
+                <h3>Product</h3>
+            </div>
+            <div class="options">
+                <a href="/product/new" class="button">New Product</a>
             </div>
             <table class="crud-table">
-                <thead class="border">
+                <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
-                        <th>Category</th>
                         <th>Unit</th>
-                        <th>Rate</th>
-                        <th>gst</th>
+                        <th>List</th>
+                        <th>GST</th>
+                        <th></th>
+
                     </tr>
                 </thead>
                 <tbody>
-                     <?php foreach ($products as $product) { ?>
+                    <?php foreach ($products as $product) { ?>
                         <tr>
-                            <td><?= $product['name'] ?></td>
-                            <td><?= $product['listgroup'] ?></td>
+                            <?php $id = $product['id'] ?>
+                            <td><?= $id ?></td>
+                            <td><a href="<?= '/product/edit?id=' . $id ?>"><?= $product['name'] ?></a></td>
                             <td><?= $product['unit'] ?></td>
+                            <td><?= $product['list'] ?></td>
                             <td><?= $product['rate'] ?></td>
                             <td><?= $product['gst'] ?></td>
-                            <td><a href="">View</a> <a href="">Edit</a></td>
+                            <td></td>
                         </tr>
                     <?php } ?>
                 </tbody>

@@ -5,5 +5,8 @@
     <a href="/order">Order</a>
     <a href="/sales">Sales</a>
     <a href="/staff">Staff</a>
+    <a href="/customer">Customer</a>
+    <a href="/supplier">Supplier</a>
     <a href="/report">Reports</a>
+    <a href="/setting">Setting</a>
 </nav>
