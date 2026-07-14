@@ -1,9 +1,13 @@
 <?php
 
+use Subod\FlowerShopManagementSystem\App\Controllers\CustomerController;
 use Subod\FlowerShopManagementSystem\App\Controllers\SalesController;
 
 $salesController = new SalesController();
-$saless = $salesController->getAll();
+$sales = $salesController->getAll();
+
+$customerController = new CustomerController();
+
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +30,7 @@ $saless = $salesController->getAll();
         </aside>
 
         <main class="main">
+            <marquee behavior="" direction="">Hi! My name is Subodh.</marquee>
             <div class="head">
                 <h3>Sales</h3>
             </div>
@@ -37,31 +42,24 @@ $saless = $salesController->getAll();
                 <thead class="border">
                     <tr>
                         <th>S.No</th>
-                        <th>Item Name </th>
-                        <th>Quantity</th>
-                        <th>Unit</th>
-                        <th>Rate</th>
-                        <th></th>
-                        <th></th>
+                        <th>Customer Name </th>
                         <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                        <?php foreach($saless as $sales) {
-                    
+
+                    <?php foreach ($sales as $sale) {
+                        $customer = $customerController->get($sale['customer_id']);
 
 
                     ?>
-                    <tr>
+                        <tr>
 
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-        <?php } ?>
+                            <td><?= $sale['id'] ?></td>
+                            <td> <a href="sales_item"> <?= $customer['name'] ?></a></td>
+                            <td><?= $sale['date'] ?></td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </main>
