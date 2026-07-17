@@ -20,6 +20,7 @@ $options = '';
 foreach ($products as $product) {
     $options .= '<option value="' . $product['id'] . '">' .
         htmlspecialchars($product['name']) .
+        
         '</option>';
 }
 

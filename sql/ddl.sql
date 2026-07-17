@@ -107,5 +107,26 @@ CREATE TABLE sales_item
      FOREIGN KEY(sales_id) REFERENCES sales(id),
     FOREIGN KEY(product_id) REFERENCES product(id)
 );
+CREATE TABLE customer_order
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    mobile CHAR(10),
+    date DATE
+);
+CREATE TABLE order_item
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_order_id INT,
+    product_id INT,
+    quantity INT,
+    rate DECIMAL(5,2),
+    gst DECIMAL(5,2),
+    amount DECIMAL(10,3),
+    total_amount DECIMAL(10,5),
+
+    FOREIGN KEY (customer_order_id) REFERENCES customer_order(id),
+    FOREIGN KEY (product_id) REFERENCES product(id)
+);
 
 

@@ -38,12 +38,10 @@ $units = $unit->getAll();
                         <input type="text" name="name" id="name">
                     </div>
                     <div class="">
-
                         <label for="">Rate</label>
                         <input type="text" name="rate" id="rate">
                     </div>
                     <div class="card-menu-l">
-
                         <label for="">GST</label>
                         <input type="text" name="gst" id="gst">
                     </div>

@@ -86,9 +86,12 @@ foreach ($products as $product) {
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input type="text" name="" id="" value="1" required></td>
                             <td>
-                                <select name="particulars[]" id="particulars">
+                                <select name="name"id="name" id="name"></select>
+                                <input type="text" name="" id="" value="1" required></td>
+                            <td>
+
+                                <select name="particulars[]" id="particulars[]">
                                     <?php foreach ($products as $product) { ?>
                                         <option value="<?= $product['id'] ?>"><?= $product['name'] ?></option>
 

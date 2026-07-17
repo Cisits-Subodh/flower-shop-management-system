@@ -1,12 +1,3 @@
-<?php
-
-use Subod\FlowerShopManagementSystem\App\Controllers\OrderController;
-use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
-
-$orderController = new OrderController();
-$orders = $orderController->getAll();
-$productControll = new ProductController();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,23 +27,22 @@ $productControll = new ProductController();
                 <thead class="border">
                     <th>S.No</th>
                     <th>Customer Name</th>
-                    <th>Mobile No</th>
-                    <th>Date</th>
-                    
+                    <th>pariculars</th>
+                    <th>Quantity</th>
+                    <th>Rate< /th>
+                    <th>Gst</th>
+                    <th>Amount</th>
 
 
                 </thead>
                 <tbody>
-                    <?php foreach ($orders as $order) {
-                        // $product = $productController->get($order['product_id']);
-                        
-                    ?>
-                        <tr>
-                            <td><?= $orders['id'] ?></td>
-                            <td><?= $orders['name'] ?></td>
-                            <td><?= $orders['date'] ?></td>
-                        </tr>
-                    <?php } ?>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
         </main>
