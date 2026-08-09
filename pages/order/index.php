@@ -5,7 +5,9 @@ use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
 
 $orderController = new OrderController();
 $orders = $orderController->getAll();
+
 $productControll = new ProductController();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,22 +37,25 @@ $productControll = new ProductController();
             <table class="crud-table">
                 <thead class="border">
                     <th>S.No</th>
+                    <th>Select Service</th>
                     <th>Customer Name</th>
                     <th>Mobile No</th>
                     <th>Date</th>
-                    
+
 
 
                 </thead>
                 <tbody>
                     <?php foreach ($orders as $order) {
                         // $product = $productController->get($order['product_id']);
-                        
+
                     ?>
                         <tr>
-                            <td><?= $orders['id'] ?></td>
-                            <td><?= $orders['name'] ?></td>
-                            <td><?= $orders['date'] ?></td>
+                            <td><?= $order['id'] ?></td>
+                            <td><?= $order['type_service'] ?></td>
+                            <td><?= $order['name'] ?></td>
+                            <td><?= $order['date'] ?></td>
+                            <td><?= $order['todate'] ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>

@@ -96,9 +96,9 @@ switch ($request) {
         $orderController=new OrderController();
         $orderController->create();
         break;
-    case "/order/item-order":
-        include $_SERVER['DOCUMENT_ROOT']."/pages/order/item-order.php";
-        break;
+    // case "/order/item-order":
+    //     include $_SERVER['DOCUMENT_ROOT']."/pages/order/item-order.php";
+    //     break;
 
     default:
         require $_SERVER['DOCUMENT_ROOT'] . "/pages/error.php";

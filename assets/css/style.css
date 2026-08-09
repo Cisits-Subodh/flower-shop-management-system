@@ -158,12 +158,13 @@ product index     */
 
 }
 
-/* purchase */
+/* purchase stat */
 .center input {
-    width: 200px;
+    width: 100px;
     gap: 10%;
     display: inline-block;
     align-items: baseline;
+
 
 
 }
@@ -312,13 +313,15 @@ product index     */
     gap:2%;
 
 }
+/* purchase */
 .left label {
-margin-left:30%;
+margin-left:15%;
 }
 .left input{
-    margin-left:15%;
+    margin-left:0%;
     padding: 0%;
 }
+/*  */
 .head-top h3 {
     margin-top:5%;
 }
@@ -346,10 +349,13 @@ margin-left:30%;
     gap: 10%;
     align-items: baseline;
     padding:1px;
-    width:104%;
+    width:104%
 
-
+}
+.input-type select{
+    width: 100px;
     
+
 
 }
 

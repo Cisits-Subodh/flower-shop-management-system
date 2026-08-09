@@ -17,7 +17,7 @@ class StockItem
     
     public function getAllNames()
     {
-        $sql = "SELECT name FROM product";
+        $sql = "SELECT * FROM product";
         $result = $this->connection->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }

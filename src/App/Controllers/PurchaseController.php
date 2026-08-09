@@ -45,6 +45,7 @@ class PurchaseController
         $n = count($_POST['particulars']);
 
         for ($i = 0; $i < $n; $i++) {
+            
             $product_id = $_POST['particulars'][$i];
             $quantity = $_POST['quantity'][$i];
             $rate = $_POST['rate'][$i];

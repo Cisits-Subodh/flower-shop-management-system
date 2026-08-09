@@ -56,9 +56,7 @@ foreach ($products as $product) {
 
                         <div class="center">
                             <label for="">Supplier</label>
-
                             <select name="supplier" id="supplier">
-
                                 <?php foreach ($suppliers as $supplier) { ?>
                                     <option value="<?= $supplier['id'] ?>"><?= $supplier['supplier_name'] ?></option>
                                 <?php } ?>
@@ -87,10 +85,9 @@ foreach ($products as $product) {
                     <tbody>
                         <tr>
                             <td>
-                                <select name="name"id="name" id="name"></select>
-                                <input type="text" name="" id="" value="1" required></td>
-                            <td>
-
+                                <input type="text" name="" id="" value="1" required>
+                            </td>
+                            <td class="select">
                                 <select name="particulars[]" id="particulars[]">
                                     <?php foreach ($products as $product) { ?>
                                         <option value="<?= $product['id'] ?>"><?= $product['name'] ?></option>

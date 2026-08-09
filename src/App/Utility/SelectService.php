@@ -1,21 +1,20 @@
 <?php
-
 namespace Subod\FlowerShopManagementSystem\App\Utility;
-
 use mysqli;
 use Subod\FlowerShopManagementSystem\App\Config\DbConfig;
 
-class Gstlist
-{
+class SelectService{
     private mysqli $connection;
+    
     public function __construct()
     {
-        $this->connection = DbConfig::getConnection();
+        $this->connection=DbConfig::getConnection();
+
     }
     public function getAllNames()
     {
-        $sql = "SELECT * FROM product";
-        $result = $this->connection->query($sql);
+        $sql= "SELECT * FROM service";
+        $result=$this->connection->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-}
+}   

@@ -1,9 +1,23 @@
 <?php
 
 use Subod\FlowerShopManagementSystem\App\Controllers\ProductController;
+use Subod\FlowerShopManagementSystem\App\Utility\SelectService;
 
 $productController = new ProductController();
 $products = $productController->getAll();
+
+
+$selectService = new SelectService();
+$selectServices = $selectService->getAllNames();
+
+
+// $options ='';
+// foreach($selectService as $selectService)
+//     {
+//         $options .='<option value="'.$selectService['id'].'">'.
+//         htmlspecialchars($selectService['name']).
+//         '</option>';
+//     }
 
 $options = '';
 foreach ($products as $product) {
@@ -11,6 +25,9 @@ foreach ($products as $product) {
         htmlspecialchars($product['name']) .
         '</option>';
 }
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,9 +54,15 @@ foreach ($products as $product) {
 
                 <div class="column-2">
 
-                    <div class="right">
-                        <label for="">Service</label>
-                        <input type="text" name="service" id="service" required>
+                    <div class="input-type">
+                        <label>Select Service</label>
+                        <select name="selectservice[]" id="selectservice">
+                            <?php foreach ($selectServices as $selectservice) { ?>
+                                <option value="<?= $selectservice['id'] ?>"><?= $selectservice['service_type'] ?></option>
+                            <?php } ?>
+
+                        </select>
+
                     </div>
 
                     <div class="right">
@@ -93,6 +116,7 @@ foreach ($products as $product) {
                 <table class="item-details" id="my-table">
                     <thead>
                         <tr>
+                            <th>S.No</th>
                             <th>Pariculars</th>
                             <th>Quantity</th>
                             <th>Rate</th>
@@ -102,13 +126,16 @@ foreach ($products as $product) {
                     </thead>
                     <tbody>
                         <tr>
+                            <td><input type="number"name="" id=""></td>
                             <td class="select">
-                                <select name="name[]" id="name">
+
+                                <select name="particulars[]" id="particulars">
                                     <?php foreach ($products as $product) { ?>
                                         <option value=" <?= $product['id'] ?>"><?= $product['name'] ?></option>
                                     <?php } ?>
                                 </select>
                             </td>
+
                             <td><input type="quantity" id="quantity" require class="width"></td>
                             <td><input type="text" name="rate" id="rate" required></td>
                             <td><input type="text" name="gst" id="gst"></td>

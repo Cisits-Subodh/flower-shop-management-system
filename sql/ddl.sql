@@ -16,7 +16,9 @@ CREATE TABLE staff
     gender CHAR(1),
     dob DATE
 );
-    CREATE TABLE product(
+
+CREATE TABLE product
+(
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     category VARCHAR(50),
@@ -24,8 +26,8 @@ CREATE TABLE staff
     supplier VARCHAR(50),
     rate VARCHAR(20),
     gst VARCHAR(10)
-
 );
+
 CREATE TABLE supplier
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -61,7 +63,6 @@ CREATE TABLE purchase_item
     FOREIGN KEY(product_id) REFERENCES product(id)
 );
 
-
 CREATE TABLE customer
 (
     id int AUTO_INCREMENT PRIMARY KEY,
@@ -74,6 +75,7 @@ CREATE TABLE customer
     state VARCHAR(100),
     pincode  VARCHAR(100)  
 );
+
 CREATE TABLE bank_ac
 (
     cash VARCHAR PRIMARY KEY,
@@ -81,19 +83,16 @@ CREATE TABLE bank_ac
     online_payment VARCHAR PRIMARY KEY,
     card VARCHAR PRIMARY KEY
 );
-CREATE TABLE gst(
-5 int PRIMARY kEY,
-18 int PRIMARY kEY,
-10 int PRIMARY KEY
-);
+
 CREATE TABLE sales
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
     date date,
     total_amount DECIMAL(50,2),
-    FOREIGN kEY(customer_id) REFERENCES customer(id)
+    FOREIGN KEY(customer_id) REFERENCES customer(id)
 );
+
 CREATE TABLE sales_item
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -104,29 +103,31 @@ CREATE TABLE sales_item
     gst DECIMAL(10),
     date DATE,
     amount DECIMAL(50,2),
-     FOREIGN KEY(sales_id) REFERENCES sales(id),
+    FOREIGN KEY(sales_id) REFERENCES sales(id),
     FOREIGN KEY(product_id) REFERENCES product(id)
 );
-CREATE TABLE customer_order
-(
+CREATE TABLE ordercustomer(
     id INT AUTO_INCREMENT PRIMARY KEY,
+    productservice VARCHAR(30),
     name VARCHAR(50),
     mobile CHAR(10),
-    date DATE
+    date DATE,
+    todate DATE
 );
-CREATE TABLE order_item
+CREATE TABLE orderitems(
+    id INT AUTO_INCREMENT PRIMARY kEY,
+    ordercustomer_id INT,
+    product_id  INT,
+    quantity VARCHAR(20),
+    rate INT,
+    gst INT,
+    amount DECIMAL(20,2),
+    FOREIGN KEY(ordercustomer_id) REFERENCES ordercustomer(id),
+    FOREIGN KEY(product_id) REFERENCES product(id)
+);
+
+CREATE TABLE service
 (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_order_id INT,
-    product_id INT,
-    quantity INT,
-    rate DECIMAL(5,2),
-    gst DECIMAL(5,2),
-    amount DECIMAL(10,3),
-    total_amount DECIMAL(10,5),
-
-    FOREIGN KEY (customer_order_id) REFERENCES customer_order(id),
-    FOREIGN KEY (product_id) REFERENCES product(id)
+    id INT AUTO_INCREMENT PRIMARY key,
+    service_type VARCHAR(100)
 );
-
-
