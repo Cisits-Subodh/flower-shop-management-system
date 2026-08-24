@@ -27,14 +27,15 @@ class OrderController
     function create()
     {
         $this->connection->begin_transaction();
-        $productservice= $_POST['selectservice'];
-        $customer_name = $_POST['customername'];
-        $mobile = $_POST['mobile'];
+
+        $productservice= $_POST['productservice'];
+        $name = $_POST['name'];
+        $mobile = $_POST['mobile']; 
         $date = $_POST['date'] ?? '';
         $todate = $_POST['date'] ?? '';
 
 
-        $sql = " INSERT INTO  ordercustomer(productservice,customer_name,mobile,date,todate) VALUES('$productservice','$customer_name','$mobile','$date','$todate')";
+        $sql = " INSERT INTO  ordercustomer(productservice,name,mobile,date,todate) VALUES('$productservice','$name','$mobile','$date','$todate')";
 
         $this->connection->query($sql);
 

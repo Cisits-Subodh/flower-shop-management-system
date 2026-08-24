@@ -40,22 +40,24 @@ $productControll = new ProductController();
                     <th>Select Service</th>
                     <th>Customer Name</th>
                     <th>Mobile No</th>
-                    <th>Date</th>
-
-
+                    <th>Order Date</th>
+                    <th>Working Date</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
 
                 </thead>
                 <tbody>
-                    <?php foreach ($orders as $order) {
-                        // $product = $productController->get($order['product_id']);
-
-                    ?>
+                    <?php foreach ($orders as $order) {?>
                         <tr>
-                            <td><?= $order['id'] ?></td>
+                            <td><?= $order['ordercustomer_id'] ?></td>
                             <td><?= $order['type_service'] ?></td>
                             <td><?= $order['name'] ?></td>
                             <td><?= $order['date'] ?></td>
                             <td><?= $order['todate'] ?></td>
+
+
                         </tr>
                     <?php } ?>
                 </tbody>

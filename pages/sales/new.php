@@ -9,9 +9,6 @@ use Subod\FlowerShopManagementSystem\App\Utility\StockItem;
 $productController = new ProductController();
 $products = $productController->getAll();
 
-$gstlist = new Gstlist();
-$gstlists = $gstlist->getAllNames();
-
 $customerController = new CustomerController();
 $customers = $customerController->getAll();
 

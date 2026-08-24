@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>order</title>
 </head>
+
 <body>
     <header>
 <?php include $_SERVER['DOCUMENT_ROOT']."/pagees/includes/header.php ?>    
     </header>
-    <div class="main-container">
-    </div>
 
-</body>
+</body>qwe
 
 </html>

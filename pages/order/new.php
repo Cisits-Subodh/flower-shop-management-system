@@ -51,106 +51,100 @@ foreach ($products as $product) {
                 <h3>Order</h3>
             </div>
             <form action="/order/create" method="post">
-
-                <div class="column-2">
-
-                    <div class="input-type">
-                        <label>Select Service</label>
-                        <select name="selectservice[]" id="selectservice">
-                            <?php foreach ($selectServices as $selectservice) { ?>
-                                <option value="<?= $selectservice['id'] ?>"><?= $selectservice['service_type'] ?></option>
-                            <?php } ?>
-
-                        </select>
-
-                    </div>
-
-                    <div class="right">
-                        <label for="">Customer Name</label>
-                        <input type="text" name="Customer_name" id="customer_name" required>
-                    </div>
-
-                    <div class="center">
-                        <label for="">Mobile No</label>
-                        <input type="text" name="mobile" id="mobile">
-                    </div>
-                    <div class="right">
-                        <label for="">Form</label>
-                        <input type="date" name="date" id="date">
-                    </div>
-                    <div class="left">
-                        <label for="">To</label>
-                        <input type="date" name="date" id="date">
-
-                    </div>
-                </div>
-
-                <div class="head-top">
-                    <h3>Items</h3>
-                </div>
-
-                <!-- <form action="/order/creat" method="post" class="from"> -->
-                <!-- <div class="gruop">
-                    <th><label for="">Item Name</label></th>
-                    <input type="text" name="item_name" id="item_name" require>
-                </div>
-                <div class="gruop">
-
-                    <label for="">Quantity</label>
-                    <input type="text" name="quantity" id="quantity" require>
-                </div>
-                <div class="gruop">
-
-                    <label for="">Rate</label>
-                    <input type="text" name="rate" id="rate" require>
-                </div>
-                <div class="gruop">
-                    <label for="">Gst</label>
-                    <input type="text" name="gst" id="gst">
-                </div>
-                <div class="gruop">
-                    <label for="">Amount</label>
-                    <input type="text" name="amount" id="amount" require>
-
-                </div> -->
                 <table class="item-details" id="my-table">
-                    <thead>
-                        <tr>
-                            <th>S.No</th>
-                            <th>Pariculars</th>
-                            <th>Quantity</th>
-                            <th>Rate</th>
-                            <th>Gst</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="number"name="" id=""></td>
-                            <td class="select">
 
-                                <select name="particulars[]" id="particulars">
-                                    <?php foreach ($products as $product) { ?>
-                                        <option value=" <?= $product['id'] ?>"><?= $product['name'] ?></option>
-                                    <?php } ?>
-                                </select>
-                            </td>
 
-                            <td><input type="quantity" id="quantity" require class="width"></td>
-                            <td><input type="text" name="rate" id="rate" required></td>
-                            <td><input type="text" name="gst" id="gst"></td>
-                            <td><input type="text" name="amount" id="amount" required></td>
-                        </tr>
-                    </tbody>
+                    <div class="column-2">
 
-                </table>
+                        <div class="input-type">
+                            <label>Select Service</label>
+                            <select name="selectservice[]" id="selectservice[]">
+                                <?php foreach ($selectServices as $selectservice) { ?>
+                                    <option value="<?= $selectservice['id'] ?>"><?= $selectservice['service_type'] ?></option>
+                                <?php } ?>
 
-                <div class="button-h">
-                    <button type="submit">submit</button>
-                </div>
+                            </select>
+
+                        </div>
+
+                        <div class="right">
+                            <label for="">Customer Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+
+                        <div class="center">
+                            <label for="">Mobile No</label>
+                            <input type="text" name="mobile" id="mobile">
+                        </div>
+                        <div class="right">
+                            <label for="">Order Date</label>
+                            <input type="date" name="date" id="date">
+                        </div>
+                        <div class="left">
+                            <label for="">Work Date</label>
+                            <input type="date" name="date" id="date">
+
+                        </div>
+                    </div>
+
+                    <div class="head-top">
+                        <h3>Items</h3>
+                    </div>
+                    <!--bottom -->
+                    <div class="column-4">
+                        <div class="gruop">
+                            <label>#S.No</label>
+                            <input type="number" name="s_no" id="s_no">
+                        </div>
+                        <div class="gruop">
+                            <label for="">Item Name</label>
+                            <input type="text" name="item_name" id="item_name" require>
+                        </div>
+
+                        <div class="gruop">
+                            <label for="">Quantity</label>
+                            <input type="text" name="quantity" id="quantity" require>
+                        </div>
+
+                        <div class="gruop">
+                            <label for="">Rate</label>
+                            <input type="text" name="rate" id="rate" require>
+                        </div>
+
+                        <div class="gruop">
+                            <label for="">Gst</label>
+                            <input type="text" name="gst" id="gst">
+                        </div>
+
+                        <div class="gruop">
+                            <label for="">Amount</label>
+                            <input type="text" name="amount" id="amount" require>
+                        </div>
+
+                    </div>
+                    <div class="group-total">
+                        <label>Total Amount</label>
+                        <input type="text" name="Tamount" id="Tamount">
+                    </div>
+
+                    <div class="button-h">
+                        <button type="submit">submit</button>
+                        <button type="button">+</button>
+                        <button type="button"> - </button>
+                    </div>
+                    
+
             </form>
+            </table>
         </main>
     </div>
-</body>
+    <script>
+        function addRow() {
+            const
+        } <
+        script >
+            <
+            /body>
 
-</html>
+            <
+            /html>
